@@ -6,6 +6,7 @@ const Button = ({
   title,
   icon,
   color,
+  textColor,
   width,
   height,
   type,
@@ -19,7 +20,7 @@ const Button = ({
         style={styles.buttonText(color, height)}
         onPress={onPress}
       >
-        <Text style={styles.titleButton}>{title}</Text>
+        <Text style={styles.titleButton(textColor)}>{title}</Text>
       </TouchableOpacity>
     );
   }
@@ -57,11 +58,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   }),
-  titleButton: {
+  titleButton: (textColor) => ({
     fontFamily: fonts.primary[700],
     fontSize: 16,
-    color: colors.white,
-  },
+    color: textColor == null ? colors.white : textColor,
+  }),
   buttonIcon: (color, width, height) => ({
     width,
     height,

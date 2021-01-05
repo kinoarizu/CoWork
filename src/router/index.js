@@ -1,15 +1,36 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { BottomNavigator } from '../components';
 import {
+  Event,
+  ForgotPassword,
+  Home,
   Login,
   OnBoardingOne,
   OnBoardingThree,
   OnBoardingTwo,
   Register,
+  ResetPassword,
   Splash,
+  UploadPhoto,
+  Verification,
 } from '../screens';
 
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+const Main = () => {
+  return (
+    <Tab.Navigator tabBar={(props) => <BottomNavigator {...props} />}>
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Event" component={Event} />
+      <Tab.Screen name="Booked" component={Home} />
+      <Tab.Screen name="Profile" component={Home} />
+      <Tab.Screen name="Favorite" component={Home} />
+    </Tab.Navigator>
+  );
+};
 
 const Router = () => {
   return (
@@ -42,6 +63,31 @@ const Router = () => {
       <Stack.Screen
         name="Register"
         component={Register}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ForgotPassword"
+        component={ForgotPassword}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ResetPassword"
+        component={ResetPassword}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="UploadPhoto"
+        component={UploadPhoto}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Verification"
+        component={Verification}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Main"
+        component={Main}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

@@ -25,7 +25,7 @@ const OnBoardingThree = ({ navigation }) => {
               color={colors.darkBlue}
               icon={<IcNext width={14} height={14} />}
               onPress={() => {
-                storeData('onBoardFinish', { value: 'finish' });
+                storeData('onBoardFinish', { value: true });
                 navigation.reset({
                   index: 0,
                   routes: [{ name: 'Login' }],

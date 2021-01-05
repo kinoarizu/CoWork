@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import FitImage from 'react-native-fit-image';
 import { ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native';
-import { colors, fonts } from '../../utils';
+import { colors, fonts, storeData } from '../../utils';
 import { Button, Gap, Link, TextInput } from '../../components';
+import { useForm } from '../../hooks';
 import {
   IcFacebook,
   IcGoogle,
@@ -14,6 +15,11 @@ import {
 
 const Login = ({ navigation }) => {
   const [visiblePassword, setVisiblePassowrd] = useState(false);
+
+  const [form, setForm] = useForm({
+    email: '',
+    password: '',
+  });
 
   useEffect(() => {
     StatusBar.setHidden(false);
@@ -30,15 +36,15 @@ const Login = ({ navigation }) => {
             label="Email"
             placeholder="Youremail@mail.com"
             keyboardType="email-address"
-            value={null}
-            onChangeText={(value) => {}}
+            value={form.email}
+            onChangeText={(value) => setForm('email', value)}
           />
           <Gap height={12} />
           <TextInput
             label="Password"
-            placeholder="Your secret password"
-            value={null}
-            onChangeText={(value) => {}}
+            placeholder="Your Secret Password"
+            value={form.password}
+            onChangeText={(value) => setForm('password', value)}
             secureTextEntry={!visiblePassword}
             suffix={
               <Button
@@ -63,7 +69,7 @@ const Login = ({ navigation }) => {
             fontFamily={fonts.primary[300]}
             textAlign="right"
             color={colors.grey3}
-            onPress={() => {}}
+            onPress={() => navigation.navigate('ForgotPassword')}
           />
           <Gap height={54} />
           <Button
@@ -71,7 +77,10 @@ const Login = ({ navigation }) => {
             height={48}
             type="btn-text"
             color={colors.purple}
-            onPress={() => {}}
+            onPress={() => {
+              storeData('isAuth', { value: true });
+              navigation.replace('Main');
+            }}
           />
           <Gap height={24} />
           <Text style={styles.textLoginWith}>Login With</Text>

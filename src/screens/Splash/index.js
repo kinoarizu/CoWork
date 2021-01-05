@@ -7,15 +7,24 @@ import { colors, fonts, getData } from '../../utils';
 const Splash = ({ navigation }) => {
   useEffect(() => {
     StatusBar.setHidden(true);
+    StatusBar.setBackgroundColor(colors.darkBlue);
+    StatusBar.setBarStyle('light-content');
+
     setTimeout(() => {
-      getData('onBoardFinish').then((response) => {
+      getData('isAuth').then((response) => {
         if (response) {
-          navigation.reset({
-            index: 0,
-            routes: [{ name: 'Login' }],
-          });
+          navigation.replace('Main');
         } else {
-          navigation.replace('OnBoardingOne');
+          getData('onBoardFinish').then((response) => {
+            if (response) {
+              navigation.reset({
+                index: 0,
+                routes: [{ name: 'Login' }],
+              });
+            } else {
+              navigation.replace('OnBoardingOne');
+            }
+          });
         }
       });
     }, 4000);

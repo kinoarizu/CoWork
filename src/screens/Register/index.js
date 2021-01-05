@@ -3,6 +3,7 @@ import FitImage from 'react-native-fit-image';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { colors, fonts } from '../../utils';
 import { Button, Gap, Link, TextInput } from '../../components';
+import { useForm } from '../../hooks';
 import {
   IcFacebook,
   IcGoogle,
@@ -13,8 +14,15 @@ import {
 } from '../../assets';
 
 const Register = ({ navigation }) => {
-  const [visiblePassword, setVisiblePassowrd] = useState(false);
-  const [visiblePasswordAgain, setVisiblePassowrdAgain] = useState(false);
+  const [visiblePassword, setVisiblePassword] = useState(false);
+  const [visiblePasswordAgain, setVisiblePasswordAgain] = useState(false);
+
+  const [form, setForm] = useForm({
+    name: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  });
 
   return (
     <View style={styles.screen}>
@@ -25,25 +33,24 @@ const Register = ({ navigation }) => {
           <Gap height={24} />
           <TextInput
             label="Name"
-            placeholder="Your Full Name"
-            keyboardType="email-address"
-            value={null}
-            onChangeText={(value) => {}}
+            placeholder="Your Awesome Name"
+            value={form.name}
+            onChangeText={(value) => setForm('name', value)}
           />
           <Gap height={12} />
           <TextInput
             label="Email"
             placeholder="Youremail@mail.com"
             keyboardType="email-address"
-            value={null}
-            onChangeText={(value) => {}}
+            value={form.email}
+            onChangeText={(value) => setForm('email', value)}
           />
           <Gap height={12} />
           <TextInput
             label="Password"
-            placeholder="Your secret password"
-            value={null}
-            onChangeText={(value) => {}}
+            placeholder="Your Secret Password"
+            value={form.password}
+            onChangeText={(value) => setForm('password', value)}
             secureTextEntry={!visiblePassword}
             suffix={
               <Button
@@ -56,7 +63,7 @@ const Register = ({ navigation }) => {
                   )
                 }
                 onPress={() => {
-                  setVisiblePassowrd(!visiblePassword);
+                  setVisiblePassword(!visiblePassword);
                 }}
               />
             }
@@ -64,9 +71,9 @@ const Register = ({ navigation }) => {
           <Gap height={12} />
           <TextInput
             label="Password Again"
-            placeholder="Your secret password again"
-            value={null}
-            onChangeText={(value) => {}}
+            placeholder="Your Secret Password Again"
+            value={form.confirmPassword}
+            onChangeText={(value) => setForm('confirmPassword', value)}
             secureTextEntry={!visiblePasswordAgain}
             suffix={
               <Button
@@ -79,18 +86,18 @@ const Register = ({ navigation }) => {
                   )
                 }
                 onPress={() => {
-                  setVisiblePassowrdAgain(!visiblePasswordAgain);
+                  setVisiblePasswordAgain(!visiblePasswordAgain);
                 }}
               />
             }
           />
           <Gap height={54} />
           <Button
-            title="Register"
+            title="Next Step"
             height={48}
             type="btn-text"
             color={colors.purple}
-            onPress={() => {}}
+            onPress={() => navigation.navigate('UploadPhoto')}
           />
           <Gap height={24} />
           <Text style={styles.textRegisterWith}>Register With</Text>

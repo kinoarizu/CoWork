@@ -1,3 +1,4 @@
 import OnBoardTitle from './OnBoardTitle';
+import BottomNavigator from './BottomNavigator';
 
-export { OnBoardTitle };
+export { OnBoardTitle, BottomNavigator };

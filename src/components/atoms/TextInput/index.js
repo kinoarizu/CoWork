@@ -22,6 +22,7 @@ const TextInput = ({
           style={styles.input}
           placeholder={placeholder}
           disableFullscreenUI={true}
+          autoCapitalize="none"
           {...restProps}
         />
         {suffix}
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
   errorValidation: {
     fontFamily: fonts.primary[500],
     fontSize: 11,
-    color: colors.red,
+    color: colors.red1,
   },
   inputContainer: {
     flex: 1,
