@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Kognitif Co-working Space",
+    "address": "Jl. Duwet III No.2, Karangasem, Kec. Laweyan",
+    "price": "50-150",
+    "rating": 4,
+    "totalComments": 235,
+    "image": "https://images.unsplash.com/photo-1572025442348-511bdcae389b"
+  },
+  {
+    "id": 2,
+    "name": "Avana Co-working Space",
+    "address": "Jl. Duwet III No.2, Karangasem, Kec. Laweyan",
+    "price": "50-150",
+    "rating": 4,
+    "totalComments": 235,
+    "image": "https://images.unsplash.com/photo-1600947871775-082dd97e2d96"
+  },
+  {
+    "id": 3,
+    "name": "Dilo Co-working Space",
+    "address": "Jl. Duwet III No.2, Karangasem, Kec. Laweyan",
+    "price": "50-150",
+    "rating": 4,
+    "totalComments": 235,
+    "image": "https://images.unsplash.com/photo-1572523463046-51b03c1e4423"
+  }
+]

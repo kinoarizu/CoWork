@@ -19,9 +19,9 @@ const TextInput = ({
       <Gap height={11} />
       <View style={styles.inputContainer}>
         <TextInputRN
+          disableFullscreenUI
           style={styles.input}
           placeholder={placeholder}
-          disableFullscreenUI={true}
           autoCapitalize="none"
           {...restProps}
         />

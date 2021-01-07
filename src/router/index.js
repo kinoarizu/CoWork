@@ -3,7 +3,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { BottomNavigator } from '../components';
 import {
-  Event,
   ForgotPassword,
   Home,
   Login,
@@ -24,7 +23,7 @@ const Main = () => {
   return (
     <Tab.Navigator tabBar={(props) => <BottomNavigator {...props} />}>
       <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Event" component={Event} />
+      <Tab.Screen name="Event" component={Home} />
       <Tab.Screen name="Booked" component={Home} />
       <Tab.Screen name="Profile" component={Home} />
       <Tab.Screen name="Favorite" component={Home} />

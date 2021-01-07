@@ -9,7 +9,6 @@ import ResetPassword from './ResetPassword';
 import UploadPhoto from './UploadPhoto';
 import Verification from './Verification';
 import Home from './Home';
-import Event from './Event';
 
 export {
   Splash,
@@ -23,5 +22,4 @@ export {
   UploadPhoto,
   Verification,
   Home,
-  Event,
 };
