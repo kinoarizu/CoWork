@@ -10,6 +10,7 @@ const Button = ({
   width,
   height,
   type,
+  borderRadius,
   disable,
   onPress,
 }) => {
@@ -17,7 +18,7 @@ const Button = ({
     return (
       <TouchableOpacity
         activeOpacity={0.5}
-        style={styles.buttonText(color, height)}
+        style={styles.buttonText(color, height, borderRadius)}
         onPress={onPress}
       >
         <Text style={styles.titleButton(textColor)}>{title}</Text>
@@ -29,7 +30,7 @@ const Button = ({
     return (
       <TouchableOpacity
         activeOpacity={0.5}
-        style={styles.buttonIcon(color, width, height)}
+        style={styles.buttonIcon(color, width, height, borderRadius)}
         onPress={onPress}
       >
         {icon}
@@ -40,7 +41,7 @@ const Button = ({
   if (disable) {
     return (
       <TouchableOpacity
-        style={styles.disabledButtonText(height)}
+        style={styles.disabledButtonText(height, borderRadius)}
         onPress={onPress}
         disabled
       >
@@ -51,10 +52,10 @@ const Button = ({
 };
 
 const styles = StyleSheet.create({
-  buttonText: (color, height) => ({
+  buttonText: (color, height, borderRadius) => ({
     height,
     backgroundColor: color,
-    borderRadius: 8,
+    borderRadius: borderRadius ? borderRadius : 8,
     justifyContent: 'center',
     alignItems: 'center',
   }),
@@ -63,18 +64,18 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: textColor == null ? colors.white : textColor,
   }),
-  buttonIcon: (color, width, height) => ({
+  buttonIcon: (color, width, height, borderRadius) => ({
     width,
     height,
     backgroundColor: color,
-    borderRadius: 8,
+    borderRadius: borderRadius ? borderRadius : 8,
     justifyContent: 'center',
     alignItems: 'center',
   }),
-  disabledButtonText: (height) => ({
+  disabledButtonText: (height, borderRadius) => ({
     height,
     backgroundColor: colors.disableGrey,
-    borderRadius: 8,
+    borderRadius: borderRadius ? borderRadius : 8,
   }),
 });
 

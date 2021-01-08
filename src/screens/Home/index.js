@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { IcCalendar, IcMap, IcRoom, workingSpaceData } from '../../assets';
 import { colors, fonts } from '../../utils';
 import {
@@ -18,7 +18,7 @@ import {
   WorkingSpaceItem,
 } from '../../components';
 
-const Home = () => {
+const Home = ({ navigation }) => {
   useEffect(() => {
     StatusBar.setHidden(false);
   });
@@ -27,7 +27,7 @@ const Home = () => {
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.profileContainer}>
-          <HomeProfile onPress={() => {}} />
+          <HomeProfile onPress={() => navigation.navigate('EditProfile')} />
           <Gap height={20} />
           <Text style={styles.slogan}>
             More Productive{'\n'}with Comfortable Place
@@ -35,7 +35,7 @@ const Home = () => {
           <Gap height={20} />
           <FilterSearchBox
             placeholder="Find Comfortable Coworking"
-            onPressFilter={() => {}}
+            onPressFilter={() => navigation.navigate('FilterSearch')}
           />
         </View>
         <View style={styles.menuContainer}>
@@ -98,8 +98,8 @@ const styles = StyleSheet.create({
   profileContainer: {
     backgroundColor: colors.white,
     paddingHorizontal: 20,
-    paddingTop: 32,
-    paddingBottom: 28,
+    paddingTop: 28,
+    paddingBottom: 24,
   },
   slogan: {
     fontFamily: fonts.primary[700],
@@ -108,8 +108,9 @@ const styles = StyleSheet.create({
     color: colors.darkBlue,
   },
   menuContainer: {
+    paddingTop: 20,
+    paddingBottom: 15,
     paddingHorizontal: 20,
-    paddingVertical: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },

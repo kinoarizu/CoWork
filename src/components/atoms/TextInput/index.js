@@ -8,6 +8,7 @@ const TextInput = ({
   validation,
   placeholder,
   suffix,
+  backgroundColor,
   ...restProps
 }) => {
   return (
@@ -17,7 +18,7 @@ const TextInput = ({
         <Text style={styles.errorValidation}>{validation}</Text>
       </View>
       <Gap height={11} />
-      <View style={styles.inputContainer}>
+      <View style={styles.inputContainer(backgroundColor)}>
         <TextInputRN
           disableFullscreenUI
           style={styles.input}
@@ -48,16 +49,16 @@ const styles = StyleSheet.create({
     fontSize: 11,
     color: colors.red1,
   },
-  inputContainer: {
+  inputContainer: (backgroundColor) => ({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingVertical: 2,
     paddingHorizontal: 14,
-    backgroundColor: colors.lightGrey,
+    backgroundColor: backgroundColor ? backgroundColor : colors.lightGrey,
     borderRadius: 7.25,
-  },
+  }),
   input: {
     flex: 1,
     fontFamily: fonts.primary[300],

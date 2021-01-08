@@ -14,6 +14,8 @@ import {
   Splash,
   UploadPhoto,
   Verification,
+  FilterSearch,
+  EditProfile,
 } from '../screens';
 
 const Stack = createStackNavigator();
@@ -87,6 +89,16 @@ const Router = () => {
       <Stack.Screen
         name="Main"
         component={Main}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="FilterSearch"
+        component={FilterSearch}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="EditProfile"
+        component={EditProfile}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

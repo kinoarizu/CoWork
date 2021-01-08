@@ -25,6 +25,8 @@ import IcStarOn from './ic_star_on.svg';
 import IcStarOff from './ic_star_off.svg';
 import IcLoveOn from './ic_love_on.svg';
 import IcLoveOff from './ic_love_off.svg';
+import IcBack from './ic_back.svg';
+import IcCamera from './ic_camera.svg';
 
 export {
   IcNext,
@@ -54,4 +56,6 @@ export {
   IcStarOff,
   IcLoveOn,
   IcLoveOff,
+  IcBack,
+  IcCamera,
 };

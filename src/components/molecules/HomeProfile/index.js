@@ -20,7 +20,7 @@ const HomeProfile = ({ onPress }) => {
       <Image source={profile.photo} style={styles.avatar} />
       <View>
         <Text style={styles.name}>{profile.fullName}</Text>
-        <Gap height={6} />
+        <Gap height={4} />
         <Text style={styles.profession}>{profile.profession}</Text>
       </View>
     </TouchableOpacity>

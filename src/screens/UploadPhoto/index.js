@@ -10,17 +10,14 @@ const UploadPhoto = ({ navigation }) => {
   const [photo, setPhoto] = useState(ILUserNull);
 
   const addPhoto = () => {
-    launchImageLibrary(
-      { quality: 0.5, maxWidth: 200, maxHeight: 200 },
-      (response) => {
-        if (response.didCancel || response.error) {
-          showError('Oops, You cancelled pick image!');
-        } else {
-          const source = { uri: response.uri };
-          setPhoto(source);
-        }
-      },
-    );
+    launchImageLibrary({ maxWidth: 200, maxHeight: 200 }, (response) => {
+      if (response.didCancel || response.error) {
+        showError('Oops, You cancelled pick image!');
+      } else {
+        const source = { uri: response.uri };
+        setPhoto(source);
+      }
+    });
   };
 
   return (

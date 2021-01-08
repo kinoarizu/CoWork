@@ -40,7 +40,7 @@ const Register = ({ navigation }) => {
           <Gap height={12} />
           <TextInput
             label="Email"
-            placeholder="Youremail@mail.com"
+            placeholder="youremail@mail.com"
             keyboardType="email-address"
             value={form.email}
             onChangeText={(value) => setForm('email', value)}

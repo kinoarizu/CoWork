@@ -27,6 +27,7 @@ const FilterSearchBox = ({
         type="btn-icon"
         width={48}
         height={48}
+        borderRadius={10}
         color={colors.lightGrey}
         icon={<IcFilter />}
         onPress={onPressFilter}
@@ -37,7 +38,6 @@ const FilterSearchBox = ({
 
 const styles = StyleSheet.create({
   wrapper: {
-    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 14,
     backgroundColor: colors.lightGrey,
-    borderRadius: 7.25,
+    borderRadius: 10,
   },
   textInput: {
     flex: 1,
