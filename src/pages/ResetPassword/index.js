@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import FitImage from 'react-native-fit-image';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { colors, fonts } from '../../utils';
-import { Button, Gap, TextInput } from '../../components';
+import { Button, Gap, LabelTextInput } from '../../components';
 import { useForm } from '../../hooks';
 import { IcHidePassword, IcShowPassword, ILChangePassowrd } from '../../assets';
 
@@ -24,7 +24,7 @@ const ResetPassword = ({ navigation }) => {
             Forgot Pass,{'\n'}Let's Tell Your Email
           </Text>
           <Gap height={24} />
-          <TextInput
+          <LabelTextInput
             label="Password"
             placeholder="Your Secret Password"
             value={form.password}
@@ -47,7 +47,7 @@ const ResetPassword = ({ navigation }) => {
             }
           />
           <Gap height={12} />
-          <TextInput
+          <LabelTextInput
             label="Password Again"
             placeholder="Your Secret Password Again"
             value={form.confirmPassword}

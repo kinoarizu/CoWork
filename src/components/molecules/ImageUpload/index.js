@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { Gap } from '..';
+import { Gap } from '../../atoms';
 import { DummyPhotoProfile, IcCamera } from '../../../assets';
 import { colors, fonts } from '../../../utils';
 

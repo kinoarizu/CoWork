@@ -2,7 +2,7 @@ import React from 'react';
 import FitImage from 'react-native-fit-image';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { colors, fonts } from '../../utils';
-import { Button, Gap, TextInput } from '../../components';
+import { Button, Gap, LabelTextInput } from '../../components';
 import { useForm } from '../../hooks';
 import { ILForgotPassword } from '../../assets';
 
@@ -25,7 +25,7 @@ const ForgotPassword = ({ navigation }) => {
             with instructions to reset your password.
           </Text>
           <Gap height={24} />
-          <TextInput
+          <LabelTextInput
             label="Email"
             placeholder="Youremail@mail.com"
             keyboardType="email-address"

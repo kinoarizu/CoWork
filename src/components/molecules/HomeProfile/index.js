@@ -1,25 +1,29 @@
 import React, { useState } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { DummyPhotoProfile } from '../../../assets';
 import { colors, fonts } from '../../../utils';
 import { Gap } from '../../atoms';
 
-const HomeProfile = ({ onPress }) => {
+const HomeProfile = ({ navigation }) => {
   const [profile, setProfile] = useState({
-    photo: DummyPhotoProfile,
-    fullName: 'Anam Zabuza',
+    name: 'Anam Zabuza',
+    email: 'anamzabuza@gmail.com',
     profession: 'Freelance Developer',
+    date: '12',
+    month: 'August',
+    year: '2002',
+    photo: 'https://i.ibb.co/pfdbhSh/profile.png',
+    cover: 'https://i.ibb.co/vXwvm1t/anas-alshanti-fe-Xpd-V001o4-unsplash.jpg',
   });
 
   return (
     <TouchableOpacity
       style={styles.container}
       activeOpacity={0.6}
-      onPress={onPress}
+      onPress={() => navigation.navigate('EditProfile', profile)}
     >
-      <Image source={profile.photo} style={styles.avatar} />
+      <Image source={{ uri: profile.photo }} style={styles.avatar} />
       <View>
-        <Text style={styles.name}>{profile.fullName}</Text>
+        <Text style={styles.name}>{profile.name}</Text>
         <Gap height={4} />
         <Text style={styles.profession}>{profile.profession}</Text>
       </View>

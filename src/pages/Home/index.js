@@ -27,7 +27,7 @@ const Home = ({ navigation }) => {
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.profileContainer}>
-          <HomeProfile onPress={() => navigation.navigate('EditProfile')} />
+          <HomeProfile navigation={navigation} />
           <Gap height={20} />
           <Text style={styles.slogan}>
             More Productive{'\n'}with Comfortable Place

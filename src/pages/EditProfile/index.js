@@ -1,20 +1,20 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { launchImageLibrary } from 'react-native-image-picker';
-import { IcBack } from '../../assets';
-import { Button, Gap, ImageUpload, Picker, TextInput } from '../../components';
+import { IcBack, monthData } from '../../assets';
+import { Button, Gap, ImageUpload, Picker, LabelTextInput } from '../../components';
 import { useForm } from '../../hooks';
 import { colors, fonts, showError } from '../../utils';
 
-const EditProfile = ({ navigation }) => {
+const EditProfile = ({ route, navigation }) => {
   const [form, setForm] = useForm({
-    name: '',
-    email: '',
-    date: '',
-    month: '',
-    year: '',
-    photo: '',
-    cover: '',
+    name: route.params.name,
+    email: route.params.email,
+    date: route.params.date,
+    month: route.params.month,
+    year: route.params.year,
+    photo: { uri: route.params.photo },
+    cover: { uri: route.params.cover },
   });
 
   const generateDates = () => {
@@ -25,25 +25,6 @@ const EditProfile = ({ navigation }) => {
     }
 
     return dates;
-  };
-
-  const generateMonths = () => {
-    let months = [
-      { label: 'January', value: 'January' },
-      { label: 'February', value: 'February' },
-      { label: 'March', value: 'March' },
-      { label: 'April', value: 'April' },
-      { label: 'May', value: 'May' },
-      { label: 'June', value: 'June' },
-      { label: 'July', value: 'July' },
-      { label: 'August', value: 'August' },
-      { label: 'September', value: 'September' },
-      { label: 'October', value: 'October' },
-      { label: 'November', value: 'November' },
-      { label: 'December', value: 'December' },
-    ];
-
-    return months;
   };
 
   const generateYears = () => {
@@ -58,25 +39,39 @@ const EditProfile = ({ navigation }) => {
   };
 
   const addPhotoProfile = () => {
-    launchImageLibrary({ maxWidth: 200, maxHeight: 200 }, (response) => {
-      if (response.didCancel || response.error) {
-        showError('Oops, You cancelled pick image!');
-      } else {
-        const source = { uri: response.uri };
-        setForm('photo', source);
-      }
-    });
+    if (form.photo === '') {
+      launchImageLibrary(
+        { quality: 0.5, maxWidth: 200, maxHeight: 200 },
+        (response) => {
+          if (response.didCancel || response.error) {
+            showError('Oops, You cancelled pick image!');
+          } else {
+            const source = { uri: response.uri };
+            setForm('photo', source);
+          }
+        },
+      );
+    } else {
+      setForm('photo', '');
+    }
   };
 
   const addCover = () => {
-    launchImageLibrary({ maxWidth: 200, maxHeight: 200 }, (response) => {
-      if (response.didCancel || response.error) {
-        showError('Oops, You cancelled pick image!');
-      } else {
-        const source = { uri: response.uri };
-        setForm('cover', source);
-      }
-    });
+    if (form.cover === '') {
+      launchImageLibrary(
+        { quality: 0.5, maxWidth: 200, maxHeight: 200 },
+        (response) => {
+          if (response.didCancel || response.error) {
+            showError('Oops, You cancelled pick image!');
+          } else {
+            const source = { uri: response.uri };
+            setForm('cover', source);
+          }
+        },
+      );
+    } else {
+      setForm('cover', '');
+    }
   };
 
   return (
@@ -95,7 +90,7 @@ const EditProfile = ({ navigation }) => {
           <Text style={styles.title}>Edit Profile</Text>
         </View>
         <View style={styles.formWrapper}>
-          <TextInput
+          <LabelTextInput
             label="Your Name"
             placeholder="Your Real Name"
             validation=""
@@ -104,7 +99,7 @@ const EditProfile = ({ navigation }) => {
             onChangeText={(value) => setForm('name', value)}
           />
           <Gap height={15} />
-          <TextInput
+          <LabelTextInput
             label="Email"
             placeholder="youremail@gmail.com"
             validation=""
@@ -131,7 +126,7 @@ const EditProfile = ({ navigation }) => {
               <Picker
                 flex={2}
                 placeholder={{ label: 'Month' }}
-                items={generateMonths()}
+                items={monthData}
                 value={form.month}
                 onValueChange={(value) => setForm('month', value)}
               />
@@ -166,7 +161,7 @@ const EditProfile = ({ navigation }) => {
             height={48}
             type="btn-text"
             color={colors.purple}
-            onPress={() => {}}
+            onPress={() => navigation.pop()}
           />
           <Gap height={4} />
         </View>

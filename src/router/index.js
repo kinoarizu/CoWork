@@ -16,7 +16,7 @@ import {
   Verification,
   FilterSearch,
   EditProfile,
-} from '../screens';
+} from '../pages';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { RatingStar } from '..';
 import { IcLoveOff, IcLoveOn } from '../../../assets';
 import { colors, fonts } from '../../../utils';
-import { Gap } from '../../atoms';
+import { Gap, RatingStar } from '../../atoms';
 
 const WorkingSpaceItem = ({
   name,

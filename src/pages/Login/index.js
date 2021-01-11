@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import FitImage from 'react-native-fit-image';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { colors, fonts } from '../../utils';
-import { Button, Gap, Link, TextInput } from '../../components';
+import { ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native';
+import { colors, fonts, storeData } from '../../utils';
+import { Button, Gap, Link, LabelTextInput } from '../../components';
 import { useForm } from '../../hooks';
 import {
   IcFacebook,
@@ -10,35 +10,29 @@ import {
   IcHidePassword,
   IcShowPassword,
   IcTwitter,
-  ILRegister,
+  ILLogin,
 } from '../../assets';
 
-const Register = ({ navigation }) => {
-  const [visiblePassword, setVisiblePassword] = useState(false);
-  const [visiblePasswordAgain, setVisiblePasswordAgain] = useState(false);
+const Login = ({ navigation }) => {
+  const [visiblePassword, setVisiblePassowrd] = useState(false);
 
   const [form, setForm] = useForm({
-    name: '',
     email: '',
     password: '',
-    confirmPassword: '',
+  });
+
+  useEffect(() => {
+    StatusBar.setHidden(false);
   });
 
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <FitImage source={ILRegister} style={styles.cover} />
-        <View style={styles.registerContainer}>
-          <Text style={styles.title}>Welcome,{'\n'}Register To Access</Text>
+        <FitImage source={ILLogin} style={styles.cover} />
+        <View style={styles.loginContainer}>
+          <Text style={styles.title}>Welcome,{'\n'}Please Login First</Text>
           <Gap height={24} />
-          <TextInput
-            label="Name"
-            placeholder="Your Awesome Name"
-            value={form.name}
-            onChangeText={(value) => setForm('name', value)}
-          />
-          <Gap height={12} />
-          <TextInput
+          <LabelTextInput
             label="Email"
             placeholder="youremail@mail.com"
             keyboardType="email-address"
@@ -46,7 +40,7 @@ const Register = ({ navigation }) => {
             onChangeText={(value) => setForm('email', value)}
           />
           <Gap height={12} />
-          <TextInput
+          <LabelTextInput
             label="Password"
             placeholder="Your Secret Password"
             value={form.password}
@@ -63,44 +57,33 @@ const Register = ({ navigation }) => {
                   )
                 }
                 onPress={() => {
-                  setVisiblePassword(!visiblePassword);
+                  setVisiblePassowrd(!visiblePassword);
                 }}
               />
             }
           />
-          <Gap height={12} />
-          <TextInput
-            label="Password Again"
-            placeholder="Your Secret Password Again"
-            value={form.confirmPassword}
-            onChangeText={(value) => setForm('confirmPassword', value)}
-            secureTextEntry={!visiblePasswordAgain}
-            suffix={
-              <Button
-                type="btn-icon"
-                icon={
-                  visiblePasswordAgain ? (
-                    <IcShowPassword width={22} height={22} />
-                  ) : (
-                    <IcHidePassword width={22} height={22} />
-                  )
-                }
-                onPress={() => {
-                  setVisiblePasswordAgain(!visiblePasswordAgain);
-                }}
-              />
-            }
+          <Gap height={16} />
+          <Link
+            title="Forgot Password"
+            fontSize={11}
+            fontFamily={fonts.primary[300]}
+            textAlign="right"
+            color={colors.grey3}
+            onPress={() => navigation.navigate('ForgotPassword')}
           />
           <Gap height={54} />
           <Button
-            title="Next Step"
+            title="Login"
             height={48}
             type="btn-text"
             color={colors.purple}
-            onPress={() => navigation.navigate('UploadPhoto')}
+            onPress={() => {
+              storeData('isAuth', { value: true });
+              navigation.replace('Main');
+            }}
           />
           <Gap height={24} />
-          <Text style={styles.textRegisterWith}>Register With</Text>
+          <Text style={styles.textLoginWith}>Login With</Text>
           <Gap height={24} />
           <View style={styles.socialContainer}>
             <Button
@@ -125,14 +108,16 @@ const Register = ({ navigation }) => {
             />
           </View>
           <Gap height={48} />
-          <View style={styles.loginContainer}>
-            <Text style={styles.textToLogin}>Already have an account? </Text>
+          <View style={styles.registerContainer}>
+            <Text style={styles.textToRegsiter}>
+              Don’t Have An Account yet?{' '}
+            </Text>
             <Link
-              title="Login"
+              title="Register"
               fontSize={12}
               fontFamily={fonts.primary[500]}
               color={colors.darkGreen}
-              onPress={() => navigation.replace('Login')}
+              onPress={() => navigation.replace('Register')}
             />
           </View>
         </View>
@@ -148,9 +133,9 @@ const styles = StyleSheet.create({
   },
   cover: {
     width: '100%',
-    height: 120,
+    height: 175,
   },
-  registerContainer: {
+  loginContainer: {
     marginHorizontal: 20,
     marginTop: 32,
     marginBottom: 28,
@@ -160,7 +145,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     lineHeight: 30,
   },
-  textRegisterWith: {
+  textLoginWith: {
     fontFamily: fonts.primary[300],
     fontSize: 12,
     color: colors.grey3,
@@ -171,16 +156,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
   },
-  loginContainer: {
+  registerContainer: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
   },
-  textToLogin: {
+  textToRegsiter: {
     fontFamily: fonts.primary[300],
     fontSize: 12,
     color: colors.grey3,
   },
 });
 
-export default Register;
+export default Login;

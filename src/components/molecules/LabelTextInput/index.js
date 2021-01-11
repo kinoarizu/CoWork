@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput as TextInputRN } from 'react-native';
-import { Gap } from '..';
+import { Gap } from '../../atoms';
 import { colors, fonts } from '../../../utils';
 
-const TextInput = ({
+const LabelTextInput = ({
   label,
   validation,
   placeholder,
@@ -62,7 +62,8 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
     fontFamily: fonts.primary[300],
+    fontSize: 13,
   },
 });
 
-export default TextInput;
+export default LabelTextInput;
