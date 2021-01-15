@@ -4,8 +4,11 @@ import FilterSearchBox from './FilterSearchBox';
 import MenuItem from './MenuItem';
 import ImageUpload from './ImageUpload';
 import LabelTextInput from './LabelTextInput';
-import OnBoardTitle from './OnBoardTitle';
 import WorkingSpaceItem from './WorkingSpaceItem';
+import HeaderBar from './HeaderBar';
+import OnBoardingSection from './OnBoardingSection';
+import SocialAuthButton from './SocialAuthButton';
+import RoomOptionItem from './RoomOptionItem';
 
 export {
   BottomNavigator,
@@ -14,6 +17,9 @@ export {
   MenuItem,
   ImageUpload,
   LabelTextInput,
-  OnBoardTitle,
   WorkingSpaceItem,
+  HeaderBar,
+  OnBoardingSection,
+  SocialAuthButton,
+  RoomOptionItem,
 };

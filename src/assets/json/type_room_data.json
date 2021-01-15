@@ -3,5 +3,7 @@
   { "name": "Event" },
   { "name": "Meeting Room" },
   { "name": "Outdoor" },
-  { "name": "Caffe" }
+  { "name": "Caffe" },
+  { "name": "Personal Space" },
+  { "name": "Pantry" }
 ]

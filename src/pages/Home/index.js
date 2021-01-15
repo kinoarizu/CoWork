@@ -42,7 +42,7 @@ const Home = ({ navigation }) => {
           <MenuItem
             title="Nearest Place"
             icon={<IcMap />}
-            onPress={() => console.log('Menu Pressed')}
+            onPress={() => navigation.navigate('NearestSpace')}
           />
           <Gap width={14} />
           <MenuItem
@@ -76,10 +76,17 @@ const Home = ({ navigation }) => {
                 <WorkingSpaceItem
                   name={item.name}
                   address={item.address}
-                  price={item.price}
+                  priceRange={item.price_range}
                   rating={item.rating}
-                  totalComments={item.totalComments}
+                  totalComment={item.total_comment}
                   image={item.image}
+                  onPress={() =>
+                    navigation.navigate('RoomOption', {
+                      name: item.name,
+                      address: item.address,
+                      roomOptions: item.room_options,
+                    })
+                  }
                 />
               );
             }}

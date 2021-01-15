@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList, ScrollView, StyleSheet, Text, View } from 'react-native';
-import { IcBack, typeRoomData } from '../../assets';
+import { typeRoomData } from '../../assets';
 import { colors, fonts } from '../../utils';
 import { useForm } from '../../hooks';
 import {
@@ -9,6 +9,7 @@ import {
   SelectableBox,
   LabelTextInput,
   DatePicker,
+  HeaderBar,
 } from '../../components';
 
 const FilterSearch = ({ navigation }) => {
@@ -35,18 +36,7 @@ const FilterSearch = ({ navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={styles.header}>
-          <Button
-            width={42}
-            height={42}
-            type="btn-icon"
-            color={colors.lightGrey}
-            icon={<IcBack width={20} height={20} />}
-            onPress={() => navigation.pop()}
-          />
-          <Gap height={20} />
-          <Text style={styles.title}>Search Room</Text>
-        </View>
+        <HeaderBar title="Filter Search" navigation={() => navigation.pop()} />
         <View style={styles.typeRoomWrapper}>
           <FlatList
             horizontal
@@ -101,6 +91,38 @@ const FilterSearch = ({ navigation }) => {
             />
           </View>
           <Gap height={15} />
+          <View style={styles.timePersonWrapper}>
+            <LabelTextInput
+              label="Time"
+              placeholder="Enter Work Time"
+              keyboardType="number-pad"
+              backgroundColor={colors.white}
+              validation=""
+              mask={'[00].[00] - [00].[00] WIB'}
+              value={form.time}
+              onChangeText={(value) => setForm('time', value)}
+            />
+            <Gap width={20} />
+            <LabelTextInput
+              label="Room Capacity"
+              placeholder="Enter Number"
+              keyboardType="number-pad"
+              backgroundColor={colors.white}
+              validation=""
+              mask={'[00].[00] - [00].[00] WIB'}
+              value={form.person}
+              onChangeText={(value) => setForm('person', value)}
+            />
+          </View>
+          <Gap height={54} />
+          <Button
+            title="Search Now"
+            height={48}
+            type="btn-text"
+            color={colors.purple}
+            onPress={() => navigation.pop()}
+          />
+          <Gap height={4} />
         </View>
       </ScrollView>
     </View>
@@ -112,23 +134,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.lightGrey,
   },
-  header: {
-    backgroundColor: colors.white,
-    paddingHorizontal: 20,
-    paddingTop: 24,
-    paddingBottom: 16,
-  },
-  title: {
-    fontFamily: fonts.primary[700],
-    fontSize: 24,
-    color: colors.darkBlue,
-  },
   typeRoomWrapper: {
     marginTop: 20,
     marginBottom: 15,
   },
   inputWrapper: {
     marginHorizontal: 20,
+    marginBottom: 20,
   },
   labelValidationWrapper: {
     flexDirection: 'row',
@@ -144,6 +156,10 @@ const styles = StyleSheet.create({
     fontFamily: fonts.primary[500],
     fontSize: 11,
     color: colors.red1,
+  },
+  timePersonWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
 });
 

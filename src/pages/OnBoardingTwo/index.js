@@ -1,38 +1,21 @@
 import React from 'react';
-import {
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
 import FitImage from 'react-native-fit-image';
-import { IcNext, ILBoard2 } from '../../assets';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import { ILBoard2 } from '../../assets';
 import { colors, fonts } from '../../utils';
-import { Button, OnBoardTitle } from '../../components';
+import { OnBoardingSection } from '../../components';
 
 const OnBoardingTwo = ({ navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <FitImage source={ILBoard2} style={styles.cover} />
-        <View style={styles.onBoardContainer}>
-          <OnBoardTitle titleOne="Find a Working" titleTwo="Space" />
-          <View style={styles.onBoardAction}>
-            <Text style={styles.onBoardSubtitle}>
-              Find coworking space easily{'\n'}
-              and quickly through this cool{'\n'}
-              application by everyone
-            </Text>
-            <Button
-              type="btn-icon"
-              width={40}
-              height={40}
-              color={colors.darkBlue}
-              onPress={() => navigation.navigate('OnBoardingThree')}
-              icon={<IcNext width={14} height={14} />}
-            />
-          </View>
-        </View>
+        <OnBoardingSection
+          headTitle="Find a Working"
+          footTitle="Space"
+          navigation={() => navigation.navigate('OnBoardingThree')}
+          description={`Find coworking space easily\nand quickly through this cool\napplication by everyone`}
+        />
       </ScrollView>
     </View>
   );

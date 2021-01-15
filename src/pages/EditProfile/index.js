@@ -1,10 +1,17 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { launchImageLibrary } from 'react-native-image-picker';
-import { IcBack, monthData } from '../../assets';
-import { Button, Gap, ImageUpload, Picker, LabelTextInput } from '../../components';
-import { useForm } from '../../hooks';
 import { colors, fonts, showError } from '../../utils';
+import { monthData } from '../../assets';
+import { useForm } from '../../hooks';
+import {
+  Button,
+  Gap,
+  ImageUpload,
+  Picker,
+  LabelTextInput,
+  HeaderBar,
+} from '../../components';
 
 const EditProfile = ({ route, navigation }) => {
   const [form, setForm] = useForm({
@@ -77,18 +84,7 @@ const EditProfile = ({ route, navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={styles.header}>
-          <Button
-            width={42}
-            height={42}
-            type="btn-icon"
-            color={colors.lightGrey}
-            icon={<IcBack width={20} height={20} />}
-            onPress={() => navigation.pop()}
-          />
-          <Gap height={20} />
-          <Text style={styles.title}>Edit Profile</Text>
-        </View>
+        <HeaderBar title="Edit Profile" navigation={navigation} />
         <View style={styles.formWrapper}>
           <LabelTextInput
             label="Your Name"
@@ -174,17 +170,6 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     backgroundColor: colors.lightGrey,
-  },
-  header: {
-    backgroundColor: colors.white,
-    paddingHorizontal: 20,
-    paddingTop: 24,
-    paddingBottom: 16,
-  },
-  title: {
-    fontFamily: fonts.primary[700],
-    fontSize: 24,
-    color: colors.darkBlue,
   },
   formWrapper: {
     padding: 20,

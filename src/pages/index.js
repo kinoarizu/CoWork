@@ -11,6 +11,8 @@ import Verification from './Verification';
 import Home from './Home';
 import FilterSearch from './FilterSearch';
 import EditProfile from './EditProfile';
+import NearestSpace from './NearestSpace';
+import RoomOption from './RoomOption';
 
 export {
   Splash,
@@ -26,4 +28,6 @@ export {
   Home,
   FilterSearch,
   EditProfile,
+  NearestSpace,
+  RoomOption,
 };

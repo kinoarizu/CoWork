@@ -1,4 +1,5 @@
 import React from 'react';
+import TextInputMask from 'react-native-text-input-mask';
 import { StyleSheet, Text, View, TextInput as TextInputRN } from 'react-native';
 import { Gap } from '../../atoms';
 import { colors, fonts } from '../../../utils';
@@ -8,17 +9,24 @@ const LabelTextInput = ({
   validation,
   placeholder,
   suffix,
+  mask,
   backgroundColor,
   ...restProps
 }) => {
-  return (
-    <View>
-      <View style={styles.labelContainer}>
-        <Text style={styles.label}>{label}</Text>
-        <Text style={styles.errorValidation}>{validation}</Text>
-      </View>
-      <Gap height={11} />
-      <View style={styles.inputContainer(backgroundColor)}>
+  const renderTextInput = () => {
+    if (mask) {
+      return (
+        <TextInputMask
+          disableFullscreenUI
+          style={styles.input}
+          placeholder={placeholder}
+          autoCapitalize="none"
+          mask={mask}
+          {...restProps}
+        />
+      );
+    } else {
+      return (
         <TextInputRN
           disableFullscreenUI
           style={styles.input}
@@ -26,6 +34,19 @@ const LabelTextInput = ({
           autoCapitalize="none"
           {...restProps}
         />
+      );
+    }
+  };
+
+  return (
+    <View style={{ flex: 1 }}>
+      <View style={styles.labelContainer}>
+        <Text style={styles.label}>{label}</Text>
+        <Text style={styles.errorValidation}>{validation}</Text>
+      </View>
+      <Gap height={11} />
+      <View style={styles.inputContainer(backgroundColor)}>
+        {renderTextInput()}
         {suffix}
       </View>
     </View>

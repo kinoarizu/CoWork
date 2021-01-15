@@ -7,22 +7,27 @@ import { Gap, RatingStar } from '../../atoms';
 const WorkingSpaceItem = ({
   name,
   address,
-  price,
+  priceRange,
   rating,
-  totalComments,
+  totalComment,
   image,
+  onPress,
 }) => {
   const [favorite, setFavorite] = useState(false);
 
   return (
-    <TouchableOpacity activeOpacity={0.8} style={styles.container}>
+    <TouchableOpacity
+      activeOpacity={0.8}
+      style={styles.container}
+      onPress={onPress}
+    >
       <Image source={{ uri: image }} style={styles.itemImage} />
       <View style={styles.itemInfo}>
         <View style={styles.itemValue}>
           <View>
             <RatingStar number={rating} />
             <Gap height={2} />
-            <Text style={styles.totalComments}>{totalComments} Comments</Text>
+            <Text style={styles.totalComment}>{totalComment} Comments</Text>
           </View>
           <TouchableOpacity onPress={() => setFavorite(!favorite)}>
             {favorite ? <IcLoveOn /> : <IcLoveOff />}
@@ -30,10 +35,8 @@ const WorkingSpaceItem = ({
         </View>
         <Gap height={8} />
         <Text style={styles.itemName}>{name}</Text>
-        <Gap height={4} />
         <Text style={styles.itemAddress}>{address}</Text>
-        <Gap height={10} />
-        <Text style={styles.itemPrice}>$ {price}</Text>
+        <Text style={styles.itemPriceRange}>$ {priceRange}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -58,13 +61,13 @@ const styles = StyleSheet.create({
     flex: 3,
     flexDirection: 'column',
     justifyContent: 'space-between',
-    paddingVertical: 8,
+    paddingVertical: 4,
   },
   itemValue: {
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  totalComments: {
+  totalComment: {
     fontFamily: fonts.primary[500],
     fontSize: 10,
     color: colors.grey5,
@@ -73,13 +76,15 @@ const styles = StyleSheet.create({
     fontFamily: fonts.primary[600],
     fontSize: 12,
     color: colors.darkBlue,
+    marginBottom: 4,
   },
   itemAddress: {
     fontFamily: fonts.primary[500],
     fontSize: 9,
     color: colors.grey5,
+    marginBottom: 7,
   },
-  itemPrice: {
+  itemPriceRange: {
     fontFamily: fonts.primary[700],
     fontSize: 13,
     color: colors.purple,

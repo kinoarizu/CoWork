@@ -3,27 +3,96 @@
     "id": 1,
     "name": "Kognitif Co-working Space",
     "address": "Jl. Duwet III No.2, Karangasem, Kec. Laweyan",
-    "price": "50-150",
+    "price_range": "50-150",
     "rating": 4,
-    "totalComments": 235,
-    "image": "https://images.unsplash.com/photo-1572025442348-511bdcae389b"
+    "total_comment": 235,
+    "image": "https://images.unsplash.com/photo-1572025442348-511bdcae389b",
+    "room_options": [
+      {
+        "id": 1,
+        "name": "Outdoor Room",
+        "price": 10,
+        "status": "Available",
+        "image": "https://images.unsplash.com/photo-1500058430940-0292a0c1f59e"
+      },
+      {
+        "id": 2,
+        "name": "Caffetarian",
+        "price": 15,
+        "status": "Full",
+        "image": "https://images.unsplash.com/photo-1572205821737-01dfdaf0b012"
+      },
+      {
+        "id": 3,
+        "name": "Meeting Room",
+        "price": 15,
+        "status": "Full",
+        "image": "https://images.unsplash.com/photo-1581887300455-5eb259f6eac0"
+      }
+    ]
   },
   {
     "id": 2,
     "name": "Avana Co-working Space",
     "address": "Jl. Duwet III No.2, Karangasem, Kec. Laweyan",
-    "price": "50-150",
+    "price_range": "50-150",
     "rating": 4,
-    "totalComments": 235,
-    "image": "https://images.unsplash.com/photo-1600947871775-082dd97e2d96"
+    "total_comment": 235,
+    "image": "https://images.unsplash.com/photo-1600947871775-082dd97e2d96",
+    "room_options": [
+      {
+        "id": 1,
+        "name": "Outdoor Room",
+        "price": 10,
+        "status": "Available",
+        "image": "https://images.unsplash.com/photo-1500058430940-0292a0c1f59e"
+      },
+      {
+        "id": 2,
+        "name": "Caffetarian",
+        "price": 15,
+        "status": "Full",
+        "image": "https://images.unsplash.com/photo-1572205821737-01dfdaf0b012"
+      },
+      {
+        "id": 3,
+        "name": "Meeting Room",
+        "price": 15,
+        "status": "Full",
+        "image": "https://images.unsplash.com/photo-1581887300455-5eb259f6eac0"
+      }
+    ]
   },
   {
     "id": 3,
     "name": "Dilo Co-working Space",
     "address": "Jl. Duwet III No.2, Karangasem, Kec. Laweyan",
-    "price": "50-150",
+    "price_range": "50-150",
     "rating": 4,
-    "totalComments": 235,
-    "image": "https://images.unsplash.com/photo-1572523463046-51b03c1e4423"
+    "total_comment": 235,
+    "image": "https://images.unsplash.com/photo-1572523463046-51b03c1e4423",
+    "room_options": [
+      {
+        "id": 1,
+        "name": "Outdoor Room",
+        "price": 10,
+        "status": "Available",
+        "image": "https://images.unsplash.com/photo-1500058430940-0292a0c1f59e"
+      },
+      {
+        "id": 2,
+        "name": "Caffetarian",
+        "price": 15,
+        "status": "Full",
+        "image": "https://images.unsplash.com/photo-1572205821737-01dfdaf0b012"
+      },
+      {
+        "id": 3,
+        "name": "Meeting Room",
+        "price": 15,
+        "status": "Full",
+        "image": "https://images.unsplash.com/photo-1581887300455-5eb259f6eac0"
+      }
+    ]
   }
 ]

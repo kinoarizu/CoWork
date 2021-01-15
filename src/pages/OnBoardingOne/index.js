@@ -1,15 +1,9 @@
 import React, { useEffect } from 'react';
-import {
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import { ScrollView, StatusBar, StyleSheet, View } from 'react-native';
 import FitImage from 'react-native-fit-image';
-import { IcNext, ILBoard1 } from '../../assets';
-import { colors, fonts } from '../../utils';
-import { Button, OnBoardTitle } from '../../components';
+import { ILBoard1 } from '../../assets';
+import { colors } from '../../utils';
+import { OnBoardingSection } from '../../components';
 
 const OnBoardingOne = ({ navigation }) => {
   useEffect(() => {
@@ -20,24 +14,12 @@ const OnBoardingOne = ({ navigation }) => {
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <FitImage source={ILBoard1} style={styles.cover} />
-        <View style={styles.onBoardContainer}>
-          <OnBoardTitle titleOne="Welcome To" titleTwo="Cowork" />
-          <View style={styles.onBoardAction}>
-            <Text style={styles.onBoardSubtitle}>
-              Work and organize events with{'\n'}
-              friends outside the office to get{'\n'}
-              rid of boredom
-            </Text>
-            <Button
-              type="btn-icon"
-              width={40}
-              height={40}
-              color={colors.darkBlue}
-              onPress={() => navigation.navigate('OnBoardingTwo')}
-              icon={<IcNext width={14} height={14} />}
-            />
-          </View>
-        </View>
+        <OnBoardingSection
+          headTitle="Welcome To"
+          footTitle="Cowork"
+          navigation={() => navigation.navigate('OnBoardingTwo')}
+          description={`Work and organize events\nwithfriends outside the office\nto get rid of boredom`}
+        />
       </ScrollView>
     </View>
   );
@@ -51,22 +33,6 @@ const styles = StyleSheet.create({
   cover: {
     width: '100%',
     height: 400,
-  },
-  onBoardContainer: {
-    marginHorizontal: 20,
-    marginVertical: 30,
-  },
-  onBoardSubtitle: {
-    fontFamily: fonts.primary[500],
-    fontSize: 12,
-    lineHeight: 20,
-    color: colors.grey2,
-  },
-  onBoardAction: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
   },
 });
 

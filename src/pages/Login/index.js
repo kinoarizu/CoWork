@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import FitImage from 'react-native-fit-image';
-import { ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native';
-import { colors, fonts, storeData } from '../../utils';
-import { Button, Gap, Link, LabelTextInput } from '../../components';
 import { useForm } from '../../hooks';
+import { ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native';
+import { IcHidePassword, IcShowPassword, ILLogin } from '../../assets';
+import { colors, fonts, storeData } from '../../utils';
 import {
-  IcFacebook,
-  IcGoogle,
-  IcHidePassword,
-  IcShowPassword,
-  IcTwitter,
-  ILLogin,
-} from '../../assets';
+  Button,
+  Gap,
+  Link,
+  LabelTextInput,
+  SocialAuthButton,
+} from '../../components';
 
 const Login = ({ navigation }) => {
-  const [visiblePassword, setVisiblePassowrd] = useState(false);
+  const [visiblePassword, setVisiblePassword] = useState(false);
 
   const [form, setForm] = useForm({
     email: '',
@@ -57,7 +56,7 @@ const Login = ({ navigation }) => {
                   )
                 }
                 onPress={() => {
-                  setVisiblePassowrd(!visiblePassword);
+                  setVisiblePassword(!visiblePassword);
                 }}
               />
             }
@@ -82,32 +81,12 @@ const Login = ({ navigation }) => {
               navigation.replace('Main');
             }}
           />
-          <Gap height={24} />
-          <Text style={styles.textLoginWith}>Login With</Text>
-          <Gap height={24} />
-          <View style={styles.socialContainer}>
-            <Button
-              type="btn-icon"
-              height={25}
-              icon={<IcGoogle />}
-              onPress={() => {}}
-            />
-            <Gap width={30} />
-            <Button
-              type="btn-icon"
-              height={25}
-              icon={<IcFacebook />}
-              onPress={() => {}}
-            />
-            <Gap width={30} />
-            <Button
-              type="btn-icon"
-              height={25}
-              icon={<IcTwitter />}
-              onPress={() => {}}
-            />
-          </View>
-          <Gap height={48} />
+          <SocialAuthButton
+            page="Login"
+            googleAction={() => {}}
+            facebookAction={() => {}}
+            twitterAction={() => {}}
+          />
           <View style={styles.registerContainer}>
             <Text style={styles.textToRegsiter}>
               Don’t Have An Account yet?{' '}
@@ -144,17 +123,6 @@ const styles = StyleSheet.create({
     fontFamily: fonts.primary[700],
     fontSize: 24,
     lineHeight: 30,
-  },
-  textLoginWith: {
-    fontFamily: fonts.primary[300],
-    fontSize: 12,
-    color: colors.grey3,
-    textAlign: 'center',
-  },
-  socialContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
   },
   registerContainer: {
     flex: 1,

@@ -9,6 +9,7 @@ const Main = () => {
       'Animated: `useNativeDriver`',
       'VirtualizedLists should never be nested',
       'componentWillReceiveProps has been renamed',
+      'DatePickerAndroid has been merged with DatePickerIOS',
     ]);
   });
 

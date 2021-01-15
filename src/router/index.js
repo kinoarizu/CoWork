@@ -16,6 +16,8 @@ import {
   Verification,
   FilterSearch,
   EditProfile,
+  NearestSpace,
+  RoomOption,
 } from '../pages';
 
 const Stack = createStackNavigator();
@@ -99,6 +101,16 @@ const Router = () => {
       <Stack.Screen
         name="EditProfile"
         component={EditProfile}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="NearestSpace"
+        component={NearestSpace}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="RoomOption"
+        component={RoomOption}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

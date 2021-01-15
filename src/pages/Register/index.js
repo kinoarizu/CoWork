@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import FitImage from 'react-native-fit-image';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { colors, fonts } from '../../utils';
-import { Button, Gap, Link, LabelTextInput } from '../../components';
+import { Button, Gap, Link, LabelTextInput, SocialAuthButton } from '../../components';
 import { useForm } from '../../hooks';
 import {
   IcFacebook,
@@ -99,32 +99,12 @@ const Register = ({ navigation }) => {
             color={colors.purple}
             onPress={() => navigation.navigate('UploadPhoto')}
           />
-          <Gap height={24} />
-          <Text style={styles.textRegisterWith}>Register With</Text>
-          <Gap height={24} />
-          <View style={styles.socialContainer}>
-            <Button
-              type="btn-icon"
-              height={25}
-              icon={<IcGoogle />}
-              onPress={() => {}}
-            />
-            <Gap width={30} />
-            <Button
-              type="btn-icon"
-              height={25}
-              icon={<IcFacebook />}
-              onPress={() => {}}
-            />
-            <Gap width={30} />
-            <Button
-              type="btn-icon"
-              height={25}
-              icon={<IcTwitter />}
-              onPress={() => {}}
-            />
-          </View>
-          <Gap height={48} />
+          <SocialAuthButton
+            page="Register"
+            googleAction={() => {}}
+            facebookAction={() => {}}
+            twitterAction={() => {}}
+          />
           <View style={styles.loginContainer}>
             <Text style={styles.textToLogin}>Already have an account? </Text>
             <Link

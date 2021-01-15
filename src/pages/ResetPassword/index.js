@@ -7,7 +7,7 @@ import { useForm } from '../../hooks';
 import { IcHidePassword, IcShowPassword, ILChangePassowrd } from '../../assets';
 
 const ResetPassword = ({ navigation }) => {
-  const [visiblePassword, setVisiblePassoword] = useState(false);
+  const [visiblePassword, setVisiblePassword] = useState(false);
   const [visiblePasswordAgain, setVisiblePasswordAgain] = useState(false);
 
   const [form, setForm] = useForm({
@@ -41,7 +41,7 @@ const ResetPassword = ({ navigation }) => {
                   )
                 }
                 onPress={() => {
-                  setVisiblePassoword(!visiblePassword);
+                  setVisiblePassword(!visiblePassword);
                 }}
               />
             }
