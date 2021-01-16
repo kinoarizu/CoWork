@@ -18,6 +18,8 @@ import {
   EditProfile,
   NearestSpace,
   RoomOption,
+  BookRoom,
+  CreateEvent,
 } from '../pages';
 
 const Stack = createStackNavigator();
@@ -111,6 +113,16 @@ const Router = () => {
       <Stack.Screen
         name="RoomOption"
         component={RoomOption}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="BookRoom"
+        component={BookRoom}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name='CreateEvent'
+        component={CreateEvent}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

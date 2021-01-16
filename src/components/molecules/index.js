@@ -9,6 +9,9 @@ import HeaderBar from './HeaderBar';
 import OnBoardingSection from './OnBoardingSection';
 import SocialAuthButton from './SocialAuthButton';
 import RoomOptionItem from './RoomOptionItem';
+import RoomPicker from './RoomPicker';
+import DatePicker from './DatePicker';
+import MultipleUploadImage from './MultipleUploadImage';
 
 export {
   BottomNavigator,
@@ -22,4 +25,7 @@ export {
   OnBoardingSection,
   SocialAuthButton,
   RoomOptionItem,
+  RoomPicker,
+  DatePicker,
+  MultipleUploadImage,
 };

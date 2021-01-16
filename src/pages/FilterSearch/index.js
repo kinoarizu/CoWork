@@ -49,10 +49,10 @@ const FilterSearch = ({ navigation }) => {
                 selected={form.type.includes(item.name)}
                 index={
                   index == 0
-                  ? 'first'
-                  : index == typeRoomData.length - 1
-                  ? 'last'
-                  : null
+                    ? 'first'
+                    : index == typeRoomData.length - 1
+                    ? 'last'
+                    : null
                 }
                 onPress={() => onSelectBox(item.name)}
               />
@@ -79,22 +79,15 @@ const FilterSearch = ({ navigation }) => {
             onChangeText={(value) => setForm('range', value)}
           />
           <Gap height={15} />
-          <View style={{ flex: 1 }}>
-            <View style={styles.labelValidationWrapper}>
-              <Text style={styles.dateLabel}>Date</Text>
-              <Text style={styles.dateValidation}></Text>
-            </View>
-            <Gap height={11} />
-            <DatePicker
-              date={form.date}
-              onDateChange={(value) => setForm('date', value)}
-            />
-          </View>
+          <DatePicker
+            date={form.date}
+            onDateChange={(value) => setForm('date', value)}
+          />
           <Gap height={15} />
           <View style={styles.timePersonWrapper}>
             <LabelTextInput
               label="Time"
-              placeholder="Enter Work Time"
+              placeholder="00.00 - 00.00"
               keyboardType="number-pad"
               backgroundColor={colors.white}
               validation=""
@@ -105,11 +98,10 @@ const FilterSearch = ({ navigation }) => {
             <Gap width={20} />
             <LabelTextInput
               label="Room Capacity"
-              placeholder="Enter Number"
+              placeholder="0 Person"
               keyboardType="number-pad"
               backgroundColor={colors.white}
               validation=""
-              mask={'[00].[00] - [00].[00] WIB'}
               value={form.person}
               onChangeText={(value) => setForm('person', value)}
             />
@@ -120,7 +112,9 @@ const FilterSearch = ({ navigation }) => {
             height={48}
             type="btn-text"
             color={colors.purple}
-            onPress={() => navigation.pop()}
+            onPress={() => {
+              navigation.navigate('NearestSpace', { title: 'Filter Result' });
+            }}
           />
           <Gap height={4} />
         </View>
@@ -141,21 +135,6 @@ const styles = StyleSheet.create({
   inputWrapper: {
     marginHorizontal: 20,
     marginBottom: 20,
-  },
-  labelValidationWrapper: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  dateLabel: {
-    fontFamily: fonts.primary[600],
-    fontSize: 12,
-    color: colors.darkBlue,
-  },
-  dateValidation: {
-    fontFamily: fonts.primary[500],
-    fontSize: 11,
-    color: colors.red1,
   },
   timePersonWrapper: {
     flexDirection: 'row',

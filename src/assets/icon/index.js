@@ -27,6 +27,7 @@ import IcLoveOn from './ic_love_on.svg';
 import IcLoveOff from './ic_love_off.svg';
 import IcBack from './ic_back.svg';
 import IcCamera from './ic_camera.svg';
+import IcPlace from './ic_place';
 
 export {
   IcNext,
@@ -58,4 +59,5 @@ export {
   IcLoveOff,
   IcBack,
   IcCamera,
+  IcPlace,
 };

@@ -48,13 +48,13 @@ const Home = ({ navigation }) => {
           <MenuItem
             title="Book Room"
             icon={<IcRoom />}
-            onPress={() => console.log('Menu Pressed')}
+            onPress={() => navigation.navigate('BookRoom')}
           />
           <Gap width={14} />
           <MenuItem
             title="Add Event"
             icon={<IcCalendar />}
-            onPress={() => console.log('Menu Pressed')}
+            onPress={() => navigation.navigate('CreateEvent')}
           />
         </View>
         <View style={styles.subContainer}>
@@ -64,7 +64,9 @@ const Home = ({ navigation }) => {
             color={colors.purple}
             fontFamily={fonts.primary[600]}
             fontSize={10}
-            onPress={() => {}}
+            onPress={() =>
+              navigation.navigate('NearestSpace', { title: 'Recomendation' })
+            }
           />
         </View>
         <View style={styles.contentContainer}>

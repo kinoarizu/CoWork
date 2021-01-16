@@ -84,7 +84,7 @@ const EditProfile = ({ route, navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <HeaderBar title="Edit Profile" navigation={navigation} />
+        <HeaderBar title="Edit Profile" navigation={() => navigation.pop()} />
         <View style={styles.formWrapper}>
           <LabelTextInput
             label="Your Name"
@@ -113,6 +113,7 @@ const EditProfile = ({ route, navigation }) => {
             <Gap height={11} />
             <View style={styles.pickerWrapper}>
               <Picker
+                flex={2}
                 placeholder={{ label: 'Date' }}
                 items={generateDates()}
                 value={form.date}
@@ -120,7 +121,7 @@ const EditProfile = ({ route, navigation }) => {
               />
               <Gap width={10} />
               <Picker
-                flex={2}
+                flex={3}
                 placeholder={{ label: 'Month' }}
                 items={monthData}
                 value={form.month}
@@ -128,6 +129,7 @@ const EditProfile = ({ route, navigation }) => {
               />
               <Gap width={10} />
               <Picker
+                flex={3}
                 placeholder={{ label: 'Year' }}
                 items={generateYears()}
                 value={form.year}

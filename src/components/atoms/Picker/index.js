@@ -27,7 +27,7 @@ const pickerStyle = {
 const styles = StyleSheet.create({
   container: (flex) => ({
     flex: flex ? flex : 1,
-    paddingHorizontal: 6,
+    paddingLeft: 8,
     backgroundColor: colors.white,
     borderRadius: 7.25,
   }),

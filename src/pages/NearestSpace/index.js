@@ -4,11 +4,14 @@ import { workingSpaceData } from '../../assets';
 import { FilterSearchBox, HeaderBar, WorkingSpaceItem } from '../../components';
 import { colors } from '../../utils';
 
-const NearestSpace = ({ navigation }) => {
+const NearestSpace = ({ route, navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <HeaderBar title="Space Nearest" navigation={() => navigation.pop()} />
+        <HeaderBar
+          title={route.params ? route.params.title : 'Space Nearest'}
+          navigation={() => navigation.pop()}
+        />
         <View style={styles.searchBoxContainer}>
           <FilterSearchBox
             placeholder="Find Comfortable Coworking"

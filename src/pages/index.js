@@ -13,6 +13,8 @@ import FilterSearch from './FilterSearch';
 import EditProfile from './EditProfile';
 import NearestSpace from './NearestSpace';
 import RoomOption from './RoomOption';
+import BookRoom from './BookRoom';
+import CreateEvent from './CreateEvent';
 
 export {
   Splash,
@@ -30,4 +32,6 @@ export {
   EditProfile,
   NearestSpace,
   RoomOption,
+  BookRoom,
+  CreateEvent,
 };

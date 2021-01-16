@@ -11,6 +11,7 @@ const LabelTextInput = ({
   suffix,
   mask,
   backgroundColor,
+  multiline,
   ...restProps
 }) => {
   const renderTextInput = () => {
@@ -18,7 +19,7 @@ const LabelTextInput = ({
       return (
         <TextInputMask
           disableFullscreenUI
-          style={styles.input}
+          style={styles.input(multiline)}
           placeholder={placeholder}
           autoCapitalize="none"
           mask={mask}
@@ -29,7 +30,7 @@ const LabelTextInput = ({
       return (
         <TextInputRN
           disableFullscreenUI
-          style={styles.input}
+          style={styles.input(multiline)}
           placeholder={placeholder}
           autoCapitalize="none"
           {...restProps}
@@ -45,7 +46,7 @@ const LabelTextInput = ({
         <Text style={styles.errorValidation}>{validation}</Text>
       </View>
       <Gap height={11} />
-      <View style={styles.inputContainer(backgroundColor)}>
+      <View style={styles.inputContainer(backgroundColor, multiline)}>
         {renderTextInput()}
         {suffix}
       </View>
@@ -70,21 +71,22 @@ const styles = StyleSheet.create({
     fontSize: 11,
     color: colors.red1,
   },
-  inputContainer: (backgroundColor) => ({
+  inputContainer: (backgroundColor, multiline) => ({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingVertical: 2,
+    paddingVertical: multiline ? 4 : 2,
     paddingHorizontal: 14,
     backgroundColor: backgroundColor ? backgroundColor : colors.lightGrey,
     borderRadius: 7.25,
   }),
-  input: {
+  input: (multiline) => ({
     flex: 1,
     fontFamily: fonts.primary[300],
     fontSize: 13,
-  },
+    textAlignVertical: multiline ? 'top' : 'center',
+  }),
 });
 
 export default LabelTextInput;
