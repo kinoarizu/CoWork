@@ -15,6 +15,7 @@ import NearestSpace from './NearestSpace';
 import RoomOption from './RoomOption';
 import BookRoom from './BookRoom';
 import CreateEvent from './CreateEvent';
+import RoomPhotos from './RoomPhotos';
 
 export {
   Splash,
@@ -34,4 +35,5 @@ export {
   RoomOption,
   BookRoom,
   CreateEvent,
+  RoomPhotos,
 };

@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 import { useForm } from '../../hooks';
 import { colors } from '../../utils';
 import {
-    Button,
+  Button,
   DatePicker,
   Gap,
   HeaderBar,

@@ -1,7 +1,7 @@
 import React from 'react';
-import { FlatList, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { FlatList, ScrollView, StyleSheet, View } from 'react-native';
 import { typeRoomData } from '../../assets';
-import { colors, fonts } from '../../utils';
+import { colors } from '../../utils';
 import { useForm } from '../../hooks';
 import {
   Button,
@@ -49,10 +49,10 @@ const FilterSearch = ({ navigation }) => {
                 selected={form.type.includes(item.name)}
                 index={
                   index == 0
-                    ? 'first'
-                    : index == typeRoomData.length - 1
-                    ? 'last'
-                    : null
+                  ? 'first'
+                  : index == typeRoomData.length - 1
+                  ? 'last'
+                  : null
                 }
                 onPress={() => onSelectBox(item.name)}
               />
@@ -113,7 +113,7 @@ const FilterSearch = ({ navigation }) => {
             type="btn-text"
             color={colors.purple}
             onPress={() => {
-              navigation.navigate('NearestSpace', { title: 'Filter Result' });
+              navigation.navigate('NearestSpace', { title: 'Filter Results' });
             }}
           />
           <Gap height={4} />

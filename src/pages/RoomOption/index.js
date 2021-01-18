@@ -20,7 +20,7 @@ const RoomOption = ({ route, navigation }) => {
                   spaceName={workSpaceItem.name}
                   address={workSpaceItem.address}
                   roomOptions={item}
-                  onPress={() => {}}
+                  onPress={() => navigation.navigate('RoomPhotos')}
                 />
               );
             }}

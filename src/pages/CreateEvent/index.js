@@ -1,5 +1,6 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
+import { launchImageLibrary } from 'react-native-image-picker';
 import { useForm } from '../../hooks';
 import { colors } from '../../utils';
 import {
@@ -8,6 +9,7 @@ import {
   Gap,
   HeaderBar,
   LabelTextInput,
+  MultipleUploadImage,
   RoomPicker,
 } from '../../components';
 
@@ -22,6 +24,20 @@ const CreateEvent = ({ navigation }) => {
     note: '',
   });
 
+  const onPickPressed = () => {
+    launchImageLibrary(
+      { quality: 0.5, maxWidth: 200, maxHeight: 200 },
+      (response) => {
+        if (response.didCancel || response.error) {
+          showError('Oops, You cancelled pick image!');
+        } else {
+          const source = { uri: response.uri };
+          setForm('posters', [...form.posters, source]);
+        }
+      },
+    );
+  };
+
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -35,7 +51,12 @@ const CreateEvent = ({ navigation }) => {
             value={form.name}
             onChangeText={(value) => setForm('name', value)}
           />
-          {/* Upload Poster Field */}
+          <Gap height={15} />
+          <MultipleUploadImage
+            images={form.posters}
+            validation=""
+            onPickPress={onPickPressed}
+          />
           <Gap height={15} />
           <DatePicker
             date={form.date}

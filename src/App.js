@@ -9,6 +9,8 @@ const Main = () => {
       'Animated: `useNativeDriver`',
       'VirtualizedLists should never be nested',
       'componentWillReceiveProps has been renamed',
+      'Encountered two children with the same key',
+      'Failed child context type: Invalid child context',
       'DatePickerAndroid has been merged with DatePickerIOS',
     ]);
   });
