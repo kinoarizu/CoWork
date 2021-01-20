@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { colors, fonts } from '../../../utils';
-import { Badge, Gap } from '../../atoms';
+import { Badge } from '../../atoms';
 
 const RoomOptionItem = ({ spaceName, address, roomOptions, onPress }) => {
   return (

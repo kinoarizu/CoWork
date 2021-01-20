@@ -16,6 +16,7 @@ import RoomOption from './RoomOption';
 import BookRoom from './BookRoom';
 import CreateEvent from './CreateEvent';
 import RoomPhotos from './RoomPhotos';
+import Payment from './Payment';
 
 export {
   Splash,
@@ -36,4 +37,5 @@ export {
   BookRoom,
   CreateEvent,
   RoomPhotos,
+  Payment,
 };

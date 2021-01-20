@@ -1,31 +1,34 @@
 import React from 'react';
 import { Image, ScrollView, StyleSheet, View } from 'react-native';
-import { DummyWorkingSpace } from '../../assets';
 import { Button, Gap, HeaderBar } from '../../components';
 import { colors } from '../../utils';
 
-const RoomPhotos = ({ navigation }) => {
+const RoomPhotos = ({ route, navigation }) => {
+  const workSpace = route.params.workSpace;
+  const room = route.params.room;
+  const pictures = route.params.pictures;
+
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <HeaderBar title="Photos" navigation={() => navigation.pop()} />
         <View style={styles.contentContainer}>
           <View style={styles.photoColumn(160)}>
-            <Image source={DummyWorkingSpace} style={styles.photo(160)} />
+            <Image source={{ uri: pictures[0] }} style={styles.photo(160)} />
           </View>
           <View style={styles.photoColumn(340)}>
-            <Image source={DummyWorkingSpace} style={styles.photo(340)} />
+            <Image source={{ uri: pictures[1] }} style={styles.photo(340)} />
             <Gap width={16} />
             <View>
-              <Image source={DummyWorkingSpace} style={styles.photo(160)} />
+              <Image source={{ uri: pictures[2] }} style={styles.photo(160)} />
               <Gap height={20} />
-              <Image source={DummyWorkingSpace} style={styles.photo(160)} />
+              <Image source={{ uri: pictures[3] }} style={styles.photo(160)} />
             </View>
           </View>
           <View style={styles.photoColumn(160)}>
-            <Image source={DummyWorkingSpace} style={styles.photo(160)} />
+            <Image source={{ uri: pictures[4] }} style={styles.photo(160)} />
             <Gap width={16} />
-            <Image source={DummyWorkingSpace} style={styles.photo(160)} />
+            <Image source={{ uri: pictures[5] }} style={styles.photo(160)} />
           </View>
           <Gap height={80} />
         </View>
@@ -36,8 +39,8 @@ const RoomPhotos = ({ navigation }) => {
           height={48}
           borderRadius={10}
           color={colors.purple}
-          title="Booking Now"
-          onPress={() => navigation.navigate('BookRoom')}
+          title="Go To Booking"
+          onPress={() => navigation.navigate('BookRoom', { workSpace, room })}
         />
       </View>
     </View>

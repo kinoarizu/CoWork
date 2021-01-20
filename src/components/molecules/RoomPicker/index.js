@@ -10,9 +10,9 @@ const RoomPicker = ({ room, onPress }) => {
     if (room) {
       return (
         <RoomOptionItem
-          spaceName={room.spaceName}
+          spaceName={room.name}
           address={room.address}
-          roomOptions={room.roomOptions}
+          roomOptions={room.room}
           onPress={onPress}
         />
       );

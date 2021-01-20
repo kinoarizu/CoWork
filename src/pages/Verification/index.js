@@ -48,7 +48,10 @@ const Verification = ({ navigation }) => {
             color={colors.purple}
             onPress={() => {
               storeData('isAuth', { value: true });
-              navigation.replace('Main');
+              navigation.reset({
+                index: 0,
+                routes: [{ name: 'Main' }],
+              });
             }}
           />
         </View>

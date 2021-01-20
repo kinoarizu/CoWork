@@ -12,10 +12,17 @@ import {
 } from '../../components';
 
 const BookRoom = ({ route, navigation }) => {
-  const pickedRoom = route.params;
+  const workSpace = route.params.workSpace;
+  const room = route.params.room;
+
+  const pickedRoom = route.params ? {
+    name: workSpace.name,
+    address: workSpace.address,
+    room,
+  } : null;
 
   const [form, setForm] = useForm({
-    pickRoom: pickedRoom,
+    pickRoom: pickedRoom ?? '',
     date: '',
     time: '',
     person: '',
@@ -77,11 +84,15 @@ const BookRoom = ({ route, navigation }) => {
           />
           <Gap height={54} />
           <Button
-            title="Booking Room"
+            title="Checkout Now"
             height={48}
             type="btn-text"
             color={colors.purple}
-            onPress={() => navigation.pop()}
+            onPress={() =>
+              navigation.navigate('Payment', {
+                room: form.pickRoom,
+              })
+            }
           />
           <Gap height={4} />
         </View>

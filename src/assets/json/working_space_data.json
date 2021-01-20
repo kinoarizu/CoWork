@@ -13,21 +13,45 @@
         "name": "Outdoor Room",
         "price": 10,
         "status": "Available",
-        "image": "https://images.unsplash.com/photo-1500058430940-0292a0c1f59e"
+        "image": "https://images.unsplash.com/photo-1500058430940-0292a0c1f59e",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://boisedev.com/wp-content/uploads/2019/01/bii1.jpeg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ]
       },
       {
         "id": 2,
         "name": "Caffetarian",
         "price": 15,
         "status": "Full",
-        "image": "https://images.unsplash.com/photo-1572205821737-01dfdaf0b012"
+        "image": "https://images.unsplash.com/photo-1572205821737-01dfdaf0b012",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://boisedev.com/wp-content/uploads/2019/01/bii1.jpeg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ]
       },
       {
         "id": 3,
         "name": "Meeting Room",
         "price": 15,
         "status": "Full",
-        "image": "https://images.unsplash.com/photo-1581887300455-5eb259f6eac0"
+        "image": "https://images.unsplash.com/photo-1581887300455-5eb259f6eac0",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://boisedev.com/wp-content/uploads/2019/01/bii1.jpeg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ]
       }
     ]
   },
@@ -45,21 +69,45 @@
         "name": "Outdoor Room",
         "price": 10,
         "status": "Available",
-        "image": "https://images.unsplash.com/photo-1500058430940-0292a0c1f59e"
+        "image": "https://images.unsplash.com/photo-1500058430940-0292a0c1f59e",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://boisedev.com/wp-content/uploads/2019/01/bii1.jpeg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ]
       },
       {
         "id": 2,
         "name": "Caffetarian",
         "price": 15,
         "status": "Full",
-        "image": "https://images.unsplash.com/photo-1572205821737-01dfdaf0b012"
+        "image": "https://images.unsplash.com/photo-1572205821737-01dfdaf0b012",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://boisedev.com/wp-content/uploads/2019/01/bii1.jpeg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ]
       },
       {
         "id": 3,
         "name": "Meeting Room",
         "price": 15,
         "status": "Full",
-        "image": "https://images.unsplash.com/photo-1581887300455-5eb259f6eac0"
+        "image": "https://images.unsplash.com/photo-1581887300455-5eb259f6eac0",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://boisedev.com/wp-content/uploads/2019/01/bii1.jpeg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ]
       }
     ]
   },
@@ -77,21 +125,45 @@
         "name": "Outdoor Room",
         "price": 10,
         "status": "Available",
-        "image": "https://images.unsplash.com/photo-1500058430940-0292a0c1f59e"
+        "image": "https://images.unsplash.com/photo-1500058430940-0292a0c1f59e",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://boisedev.com/wp-content/uploads/2019/01/bii1.jpeg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ]
       },
       {
         "id": 2,
         "name": "Caffetarian",
         "price": 15,
         "status": "Full",
-        "image": "https://images.unsplash.com/photo-1572205821737-01dfdaf0b012"
+        "image": "https://images.unsplash.com/photo-1572205821737-01dfdaf0b012",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://boisedev.com/wp-content/uploads/2019/01/bii1.jpeg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ]
       },
       {
         "id": 3,
         "name": "Meeting Room",
         "price": 15,
         "status": "Full",
-        "image": "https://images.unsplash.com/photo-1581887300455-5eb259f6eac0"
+        "image": "https://images.unsplash.com/photo-1581887300455-5eb259f6eac0",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://boisedev.com/wp-content/uploads/2019/01/bii1.jpeg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ]
       }
     ]
   }

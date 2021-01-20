@@ -21,6 +21,8 @@ import {
   BookRoom,
   CreateEvent,
   RoomPhotos,
+  Payment,
+  Success,
 } from '../pages';
 
 const Stack = createStackNavigator();
@@ -129,6 +131,11 @@ const Router = () => {
       <Stack.Screen
         name='RoomPhotos'
         component={RoomPhotos}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name='Payment'
+        component={Payment}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

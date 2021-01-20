@@ -4,7 +4,7 @@ import { HeaderBar, RoomOptionItem } from '../../components';
 import { colors } from '../../utils';
 
 const RoomOption = ({ route, navigation }) => {
-  const workSpaceItem = route.params;
+  const workSpace = route.params;
 
   return (
     <View style={styles.screen}>
@@ -12,15 +12,21 @@ const RoomOption = ({ route, navigation }) => {
         <HeaderBar title="Room Option" navigation={() => navigation.pop()} />
         <View style={styles.contentContainer}>
           <FlatList
-            data={workSpaceItem.roomOptions}
+            data={workSpace.roomOptions}
             keyExtractor={(item) => item.id.toString()}
             renderItem={({ item }) => {
               return (
                 <RoomOptionItem
-                  spaceName={workSpaceItem.name}
-                  address={workSpaceItem.address}
+                  spaceName={workSpace.name}
+                  address={workSpace.address}
                   roomOptions={item}
-                  onPress={() => navigation.navigate('RoomPhotos')}
+                  onPress={() =>
+                    navigation.navigate('RoomPhotos', {
+                      workSpace,
+                      room: item,
+                      pictures: item.pictures,
+                    })
+                  }
                 />
               );
             }}

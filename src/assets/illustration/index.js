@@ -9,6 +9,10 @@ import ILChangePassowrd from './il_change_password.png';
 import ILForgotPassword from './il_forgot_password.png';
 import ILVerfication from './il_verification.png';
 import ILUserNull from './il_user_null.png';
+import ILBCA from './il_bca.png';
+import ILCreditCard from './il_credit_card.png';
+import ILPaypal from './il_paypal.png';
+import ILSuccessBooking from './il_success_booking.png';
 
 export {
   ILLogo,
@@ -22,4 +26,8 @@ export {
   ILForgotPassword,
   ILVerfication,
   ILUserNull,
+  ILBCA,
+  ILCreditCard,
+  ILPaypal,
+  ILSuccessBooking,
 };
