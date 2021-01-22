@@ -86,6 +86,8 @@ const Home = ({ navigation }) => {
                     navigation.navigate('RoomOption', {
                       name: item.name,
                       address: item.address,
+                      totalComment: item.total_comment,
+                      rating: item.rating,
                       roomOptions: item.room_options,
                     })
                   }

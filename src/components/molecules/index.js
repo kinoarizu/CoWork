@@ -13,6 +13,7 @@ import RoomPicker from './RoomPicker';
 import DatePicker from './DatePicker';
 import MultipleUploadImage from './MultipleUploadImage';
 import PaymentOptionItem from './PaymentOptionItem';
+import RoomInfoItem from './RoomInfoItem';
 
 export {
   BottomNavigator,
@@ -30,4 +31,5 @@ export {
   DatePicker,
   MultipleUploadImage,
   PaymentOptionItem,
+  RoomInfoItem,
 };

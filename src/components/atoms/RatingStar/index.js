@@ -2,15 +2,15 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { IcStarOff, IcStarOn } from '../../../assets';
 
-const RatingStar = ({ number }) => {
+const RatingStar = ({ number, size = 14 }) => {
   const renderStar = () => {
     let star = [];
 
     for (let i = 1; i <= 5; i++) {
       if (i <= number) {
-        star.push(<IcStarOn key={i} />);
+        star.push(<IcStarOn key={i} width={size} height={size} />);
       } else {
-        star.push(<IcStarOff key={i} />);
+        star.push(<IcStarOff key={i} width={size} height={size} />);
       }
     }
 

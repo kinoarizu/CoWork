@@ -12,8 +12,7 @@ import {
 } from '../../components';
 
 const BookRoom = ({ route, navigation }) => {
-  const workSpace = route.params.workSpace;
-  const room = route.params.room;
+  const { workSpace, room } = route.params ?? {};
 
   const pickedRoom = route.params ? {
     name: workSpace.name,
@@ -33,7 +32,7 @@ const BookRoom = ({ route, navigation }) => {
     if (form.pickRoom) {
       setForm('pickRoom', '');
     } else {
-      navigation.navigate('NearestSpace');
+      navigation.replace('NearestSpace');
     }
   };
 
@@ -87,7 +86,8 @@ const BookRoom = ({ route, navigation }) => {
             title="Checkout Now"
             height={48}
             type="btn-text"
-            color={colors.purple}
+            color={form.pickRoom === '' ? colors.white : colors.purple}
+            disable={form.pickRoom === ''}
             onPress={() =>
               navigation.navigate('Payment', {
                 room: form.pickRoom,

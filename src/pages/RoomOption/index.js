@@ -21,7 +21,7 @@ const RoomOption = ({ route, navigation }) => {
                   address={workSpace.address}
                   roomOptions={item}
                   onPress={() =>
-                    navigation.navigate('RoomPhotos', {
+                    navigation.navigate('RoomDetail', {
                       workSpace,
                       room: item,
                       pictures: item.pictures,

@@ -23,6 +23,8 @@ import {
   RoomPhotos,
   Payment,
   Success,
+  RoomDetail,
+  Comment,
 } from '../pages';
 
 const Stack = createStackNavigator();
@@ -136,6 +138,16 @@ const Router = () => {
       <Stack.Screen
         name='Payment'
         component={Payment}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name='RoomDetail'
+        component={RoomDetail}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name='Comment'
+        component={Comment}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

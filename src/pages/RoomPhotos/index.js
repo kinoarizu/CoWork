@@ -4,9 +4,7 @@ import { Button, Gap, HeaderBar } from '../../components';
 import { colors } from '../../utils';
 
 const RoomPhotos = ({ route, navigation }) => {
-  const workSpace = route.params.workSpace;
-  const room = route.params.room;
-  const pictures = route.params.pictures;
+  const { workSpace, room, pictures } = route.params;
 
   return (
     <View style={styles.screen}>

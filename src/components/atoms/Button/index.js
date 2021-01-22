@@ -14,6 +14,18 @@ const Button = ({
   disable,
   onPress,
 }) => {
+  if (disable) {
+    return (
+      <TouchableOpacity
+        style={styles.disabledButtonText(height, borderRadius)}
+        onPress={onPress}
+        disabled
+      >
+        <Text style={styles.titleButton(color, height, borderRadius)}>{title}</Text>
+      </TouchableOpacity>
+    );
+  }
+
   if (type === 'btn-text') {
     return (
       <TouchableOpacity
@@ -34,18 +46,6 @@ const Button = ({
         onPress={onPress}
       >
         {icon}
-      </TouchableOpacity>
-    );
-  }
-
-  if (disable) {
-    return (
-      <TouchableOpacity
-        style={styles.disabledButtonText(height, borderRadius)}
-        onPress={onPress}
-        disabled
-      >
-        <Text style={styles.titleButton}>{title}</Text>
       </TouchableOpacity>
     );
   }
@@ -76,6 +76,8 @@ const styles = StyleSheet.create({
     height,
     backgroundColor: colors.disableGrey,
     borderRadius: borderRadius ? borderRadius : 8,
+    justifyContent: 'center',
+    alignItems: 'center',
   }),
 });
 

@@ -25,7 +25,7 @@ const WorkingSpaceItem = ({
       <View style={styles.itemInfo}>
         <View style={styles.itemValue}>
           <View>
-            <RatingStar number={rating} />
+            <RatingStar number={rating} size={11} />
             <Gap height={2} />
             <Text style={styles.totalComment}>{totalComment} Comments</Text>
           </View>

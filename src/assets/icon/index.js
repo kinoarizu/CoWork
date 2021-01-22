@@ -27,7 +27,12 @@ import IcLoveOn from './ic_love_on.svg';
 import IcLoveOff from './ic_love_off.svg';
 import IcBack from './ic_back.svg';
 import IcCamera from './ic_camera.svg';
-import IcPlace from './ic_place';
+import IcPlace from './ic_place.svg';
+import IcOpening from './ic_opening.svg';
+import IcRoomList from './ic_room_list.svg';
+import IcFasilities from './ic_fasilities.svg';
+import IcPhotos from './ic_photos.svg';
+import IcPhotoCamera from './ic_photo_camera.svg';
 
 export {
   IcNext,
@@ -60,4 +65,9 @@ export {
   IcBack,
   IcCamera,
   IcPlace,
+  IcOpening,
+  IcRoomList,
+  IcFasilities,
+  IcPhotos,
+  IcPhotoCamera,
 };

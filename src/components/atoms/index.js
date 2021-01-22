@@ -6,6 +6,7 @@ import Picker from './Picker';
 import RatingStar from './RatingStar';
 import SelectableBox from './SelectableBox';
 import Badge from './Badge';
+import Divider from './Divider';
 
 export {
   Gap,
@@ -16,4 +17,5 @@ export {
   RatingStar,
   SelectableBox,
   Badge,
+  Divider,
 };
