@@ -33,6 +33,7 @@ import IcRoomList from './ic_room_list.svg';
 import IcFasilities from './ic_fasilities.svg';
 import IcPhotos from './ic_photos.svg';
 import IcPhotoCamera from './ic_photo_camera.svg';
+import IcReport from "./ic_report.svg";
 
 export {
   IcNext,
@@ -70,4 +71,5 @@ export {
   IcFasilities,
   IcPhotos,
   IcPhotoCamera,
+  IcReport,
 };

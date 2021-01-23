@@ -98,7 +98,9 @@ const RoomDetail = ({ route, navigation }) => {
           color={colors.purple}
           fontSize={12}
           fontFamily={fonts.primary[500]}
-          onPress={() => {}}
+          onPress={() =>
+            navigation.navigate('Comment', { comments: room.comments })
+          }
         />
       </View>
       <Divider color={colors.grey5} />
