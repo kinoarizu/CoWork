@@ -20,6 +20,12 @@ import Payment from './Payment';
 import RoomDetail from './RoomDetail';
 import Comment from './Comment';
 import Success from './Success';
+import Favorite from './Favorite';
+import Booked from './Booked';
+import EventDetail from './EventDetail';
+import Profile from './Profile';
+import Event from './Event';
+import RoomView from './RoomView';
 
 export {
   Splash,
@@ -44,4 +50,10 @@ export {
   RoomDetail,
   Comment,
   Success,
+  Favorite,
+  Booked,
+  EventDetail,
+  Profile,
+  Event,
+  RoomView,
 };

@@ -25,6 +25,12 @@ import {
   Success,
   RoomDetail,
   Comment,
+  Favorite,
+  Booked,
+  EventDetail,
+  Profile,
+  Event,
+  RoomView,
 } from '../pages';
 
 const Stack = createStackNavigator();
@@ -34,10 +40,10 @@ const Main = () => {
   return (
     <Tab.Navigator tabBar={(props) => <BottomNavigator {...props} />}>
       <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Event" component={Home} />
-      <Tab.Screen name="Booked" component={Home} />
-      <Tab.Screen name="Profile" component={Home} />
-      <Tab.Screen name="Favorite" component={Home} />
+      <Tab.Screen name="Event" component={Event} />
+      <Tab.Screen name="Booked" component={Booked} />
+      <Tab.Screen name="Profile" component={Profile} />
+      <Tab.Screen name="Favorite" component={Favorite} />
     </Tab.Navigator>
   );
 };
@@ -153,6 +159,36 @@ const Router = () => {
       <Stack.Screen
         name="Success"
         component={Success}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Favorite"
+        component={Favorite}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Booked"
+        component={Booked}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="EventDetail"
+        component={EventDetail}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Profile"
+        component={Profile}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Event"
+        component={Event}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="RoomView"
+        component={RoomView}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

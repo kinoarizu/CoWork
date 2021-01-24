@@ -1,7 +1,7 @@
 import React from 'react';
 import QRCode from 'react-native-qrcode-svg';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { Button, Divider, Gap, InfoItem } from '../../components';
+import { Button, Gap, InfoItem } from '../../components';
 import { colors, fonts } from '../../utils';
 import { IcDate, IcPerson, IcTime } from '../../assets';
 
