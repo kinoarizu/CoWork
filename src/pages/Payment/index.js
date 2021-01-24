@@ -11,7 +11,7 @@ import {
 } from '../../components';
 
 const Payment = ({ route, navigation }) => {
-  const room = route.params.room;
+  const { room, booked, type } = route.params;
 
   const [payment, setPayment] = useState();
 
@@ -55,10 +55,11 @@ const Payment = ({ route, navigation }) => {
             onPress={() => {
               navigation.reset({
                 index: 0,
-                routes: [{ name: 'Main' }],
+                routes: [{ name: 'Success', params: { booked, type } }],
               });
             }}
           />
+          <Gap height={4} />
         </View>
       </ScrollView>
     </View>

@@ -85,7 +85,7 @@ const RoomDetail = ({ route, navigation }) => {
         <Text style={styles.roomName}>({room.name} Room)</Text>
         <Text style={styles.addressText}>{workSpace.address}</Text>
       </View>
-      <Divider color={colors.grey5} />
+      <Divider color={colors.grey5} type="solid" />
       <View style={styles.ratingContent}>
         <View>
           <RatingStar number={workSpace.rating} size={14} />
@@ -103,7 +103,7 @@ const RoomDetail = ({ route, navigation }) => {
           }
         />
       </View>
-      <Divider color={colors.grey5} />
+      <Divider color={colors.grey5} type="solid" />
       <View style={styles.workSpaceContent}>
         <RoomInfoItem
           title="Opening"

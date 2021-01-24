@@ -7,6 +7,7 @@ import RatingStar from './RatingStar';
 import SelectableBox from './SelectableBox';
 import Badge from './Badge';
 import Divider from './Divider';
+import InfoItem from './InfoItem';
 
 export {
   Gap,
@@ -18,4 +19,5 @@ export {
   SelectableBox,
   Badge,
   Divider,
+  InfoItem,
 };

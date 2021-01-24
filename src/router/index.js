@@ -126,28 +126,33 @@ const Router = () => {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name='CreateEvent'
+        name="CreateEvent"
         component={CreateEvent}
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name='RoomPhotos'
+        name="RoomPhotos"
         component={RoomPhotos}
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name='Payment'
+        name="Payment"
         component={Payment}
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name='RoomDetail'
+        name="RoomDetail"
         component={RoomDetail}
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name='Comment'
+        name="Comment"
         component={Comment}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Success"
+        component={Success}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

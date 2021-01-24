@@ -19,6 +19,7 @@ import RoomPhotos from './RoomPhotos';
 import Payment from './Payment';
 import RoomDetail from './RoomDetail';
 import Comment from './Comment';
+import Success from './Success';
 
 export {
   Splash,
@@ -42,4 +43,5 @@ export {
   Payment,
   RoomDetail,
   Comment,
+  Success,
 };

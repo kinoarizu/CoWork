@@ -91,6 +91,8 @@ const BookRoom = ({ route, navigation }) => {
             onPress={() =>
               navigation.navigate('Payment', {
                 room: form.pickRoom,
+                booked: form,
+                type: 'room',
               })
             }
           />
