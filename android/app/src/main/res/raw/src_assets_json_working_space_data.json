@@ -1,0 +1,566 @@
+[
+  {
+    "id": 1,
+    "name": "Kognitif Co-working Space",
+    "address": "Jl. Duwet III No.2, Karangasem, Kec. Laweyan",
+    "price_range": "50-150",
+    "rating": 4,
+    "total_comment": 235,
+    "image": "https://images.unsplash.com/photo-1572025442348-511bdcae389b",
+    "room_options": [
+      {
+        "id": 1,
+        "name": "Outdoor Room",
+        "price": 10,
+        "status": "Available",
+        "image": "https://images.unsplash.com/photo-1500058430940-0292a0c1f59e",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://www.theworkspace.co.za/wp-content/uploads/2016/11/co-working-randburg_fw.jpg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 3,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Caffetarian",
+        "price": 15,
+        "status": "Full",
+        "image": "https://images.unsplash.com/photo-1572205821737-01dfdaf0b012",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://www.theworkspace.co.za/wp-content/uploads/2016/11/co-working-randburg_fw.jpg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 3,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Meeting Room",
+        "price": 15,
+        "status": "Full",
+        "image": "https://images.unsplash.com/photo-1581887300455-5eb259f6eac0",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://www.theworkspace.co.za/wp-content/uploads/2016/11/co-working-randburg_fw.jpg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 3,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Avana Co-working Space",
+    "address": "Jl. Duwet III No.2, Karangasem, Kec. Laweyan",
+    "price_range": "50-150",
+    "rating": 4,
+    "total_comment": 235,
+    "image": "https://images.unsplash.com/photo-1600947871775-082dd97e2d96",
+    "room_options": [
+      {
+        "id": 1,
+        "name": "Outdoor Room",
+        "price": 10,
+        "status": "Available",
+        "image": "https://images.unsplash.com/photo-1500058430940-0292a0c1f59e",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://www.theworkspace.co.za/wp-content/uploads/2016/11/co-working-randburg_fw.jpg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 3,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Caffetarian",
+        "price": 15,
+        "status": "Full",
+        "image": "https://images.unsplash.com/photo-1572205821737-01dfdaf0b012",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://www.theworkspace.co.za/wp-content/uploads/2016/11/co-working-randburg_fw.jpg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 3,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Meeting Room",
+        "price": 15,
+        "status": "Full",
+        "image": "https://images.unsplash.com/photo-1581887300455-5eb259f6eac0",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://www.theworkspace.co.za/wp-content/uploads/2016/11/co-working-randburg_fw.jpg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 3,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Dilo Co-working Space",
+    "address": "Jl. Duwet III No.2, Karangasem, Kec. Laweyan",
+    "price_range": "50-150",
+    "rating": 4,
+    "total_comment": 235,
+    "image": "https://images.unsplash.com/photo-1572523463046-51b03c1e4423",
+    "room_options": [
+      {
+        "id": 1,
+        "name": "Outdoor Room",
+        "price": 10,
+        "status": "Available",
+        "image": "https://images.unsplash.com/photo-1500058430940-0292a0c1f59e",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://www.theworkspace.co.za/wp-content/uploads/2016/11/co-working-randburg_fw.jpg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 3,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Caffetarian",
+        "price": 15,
+        "status": "Full",
+        "image": "https://images.unsplash.com/photo-1572205821737-01dfdaf0b012",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://www.theworkspace.co.za/wp-content/uploads/2016/11/co-working-randburg_fw.jpg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 3,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Meeting Room",
+        "price": 15,
+        "status": "Full",
+        "image": "https://images.unsplash.com/photo-1581887300455-5eb259f6eac0",
+        "pictures": [
+          "https://www.rukita.co/stories/wp-content/uploads/2020/01/coworking-space-in-jakarta-1360x907.jpg",
+          "https://cdn.trentech.id/static/img/2020/04/co-working-space-di-jakarta-trentech-id_gwr1x1.jpg",
+          "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+          "https://www.codeworking.space/images/content/CODE-WORKING-SPACE_18.jpg",
+          "https://www.theworkspace.co.za/wp-content/uploads/2016/11/co-working-randburg_fw.jpg",
+          "https://www.lbhf.gov.uk/sites/default/files/styles/articles_main_image/public/newsarticle/work.life_2.png"
+        ],
+        "comments": [
+          {
+            "id": 1,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          },
+          {
+            "id": 3,
+            "user_name": "Abu Azis",
+            "user_photo": "https://i.ibb.co/pfdbhSh/profile.png",
+            "rating": 5,
+            "datetime": "09.20 | 27 Jun 2027",
+            "comment": "Strategic location which is located behind the Karanganyar Church, precisely in front of the Muttaqin Badranasri 3/12 Cangakan Karanganyar mosque.",
+            "photos": [
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg",
+              "https://officesnapshots.com/wp-content/uploads/2019/09/code-working-space-offices-hamburg-4.jpg"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
