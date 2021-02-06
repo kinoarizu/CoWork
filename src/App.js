@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import Router from './router';
+import store from './redux/store';
 import { NavigationContainer } from '@react-navigation/native';
 import { LogBox } from 'react-native';
+import { Provider, useSelector } from 'react-redux';
+import { FlashMessage, Loading } from './components';
 
 const Main = () => {
   useEffect(() => {
@@ -15,15 +18,23 @@ const Main = () => {
     ]);
   });
 
+  const { isLoading } = useSelector((state) => state.globalReducer);
+
   return (
     <NavigationContainer>
       <Router />
+      <FlashMessage />
+      {isLoading && <Loading />}
     </NavigationContainer>
   );
 };
 
 const App = () => {
-  return <Main />;
+  return (
+    <Provider store={store}>
+      <Main />
+    </Provider>
+  );
 };
 
 export default App;

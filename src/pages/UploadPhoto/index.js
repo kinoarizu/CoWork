@@ -1,13 +1,26 @@
 import React, { useState } from 'react';
 import FitImage from 'react-native-fit-image';
 import { launchImageLibrary } from 'react-native-image-picker';
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { colors, fonts, showError } from '../../utils';
 import { Button, Gap } from '../../components';
 import { IcAdd, IcRemove, ILUploadPhoto, ILUserNull } from '../../assets';
+import { useDispatch, useSelector } from 'react-redux';
+import { registerAction } from '../../redux/action';
+import {
+  ActivityIndicator,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
+import { setLoading } from '../../redux/action/global';
 
 const UploadPhoto = ({ navigation }) => {
   const [photo, setPhoto] = useState(ILUserNull);
+
+  const dispatch = useDispatch();
+  const { authReducer, photoReducer } = useSelector((state) => state);
 
   const addPhoto = () => {
     launchImageLibrary(
@@ -17,10 +30,33 @@ const UploadPhoto = ({ navigation }) => {
           showError('Oops, You cancelled pick image!');
         } else {
           const source = { uri: response.uri };
+          const dataImage = {
+            uri: response.uri,
+            type: response.type,
+            name: response.fileName,
+          };
           setPhoto(source);
+          dispatch({ type: 'SET_PHOTO', payload: dataImage });
+          dispatch({ type: 'SET_UPLOAD_STATUS', payload: true });
         }
       },
     );
+  };
+
+  const removePhoto = () => {
+    setPhoto(ILUserNull);
+    dispatch({ type: 'SET_PHOTO', payload: null });
+    dispatch({ type: 'SET_UPLOAD_STATUS', payload: false });
+  };
+
+  const onUploadPressed = () => {
+    setLoading(true);
+    dispatch(registerAction(authReducer, photoReducer, navigation));
+  };
+
+  const onSkipPressed = () => {
+    setLoading(true);
+    dispatch(registerAction(authReducer, null, navigation));
   };
 
   return (
@@ -42,9 +78,7 @@ const UploadPhoto = ({ navigation }) => {
                   height={28}
                   color={colors.red2}
                   icon={<IcRemove width={13} height={13} />}
-                  onPress={() => {
-                    setPhoto(ILUserNull);
-                  }}
+                  onPress={removePhoto}
                 />
               )}
               {photo == ILUserNull && (
@@ -59,13 +93,13 @@ const UploadPhoto = ({ navigation }) => {
               )}
             </View>
           </View>
-          <Gap height={85} />
+          <Gap height={130} />
           <Button
             title="Upload"
             height={48}
             type="btn-text"
             color={colors.purple}
-            onPress={() => navigation.navigate('Verification')}
+            onPress={() => onUploadPressed()}
           />
           <Gap height={14} />
           <Button
@@ -73,7 +107,7 @@ const UploadPhoto = ({ navigation }) => {
             height={48}
             type="btn-text"
             color={colors.grey1}
-            onPress={() => navigation.navigate('Verification')}
+            onPress={() => onSkipPressed()}
           />
         </View>
       </ScrollView>
