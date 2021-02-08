@@ -37,6 +37,7 @@ import IcReport from './ic_report.svg';
 import IcDate from './ic_date.svg';
 import IcTime from './ic_time.svg';
 import IcPerson from './ic_person.svg';
+import IcLogout from './ic_logout.svg';
 
 export {
   IcNext,
@@ -78,4 +79,5 @@ export {
   IcDate,
   IcTime,
   IcPerson,
+  IcLogout,
 };

@@ -3,7 +3,9 @@ import FitImage from 'react-native-fit-image';
 import { useForm } from '../../hooks';
 import { ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native';
 import { IcHidePassword, IcShowPassword, ILLogin } from '../../assets';
-import { colors, fonts, storeData } from '../../utils';
+import { colors, fonts } from '../../utils';
+import { useDispatch } from 'react-redux';
+import { loginAction } from '../../redux/action';
 import {
   Button,
   Gap,
@@ -15,6 +17,13 @@ import {
 const Login = ({ navigation }) => {
   const [visiblePassword, setVisiblePassword] = useState(false);
 
+  const dispatch = useDispatch();
+
+  const [validation, setValidation] = useState({
+    errorEmail: null,
+    errorPassword: null,
+  });
+
   const [form, setForm] = useForm({
     email: '',
     password: '',
@@ -23,6 +32,10 @@ const Login = ({ navigation }) => {
   useEffect(() => {
     StatusBar.setHidden(false);
   });
+
+  const onSubmit = () => {
+    dispatch(loginAction(form, navigation));
+  };
 
   return (
     <View style={styles.screen}>
@@ -36,15 +49,29 @@ const Login = ({ navigation }) => {
             placeholder="youremail@mail.com"
             keyboardType="email-address"
             value={form.email}
-            onChangeText={(value) => setForm('email', value)}
+            validation={validation.errorEmail}
+            onChangeText={(value) => {
+              setForm('email', value);
+              if (value.length === 0) {
+                setValidation({
+                  ...validation,
+                  errorEmail: 'Email Address Must Be Required',
+                });
+              } else {
+                setValidation({
+                  ...validation,
+                  errorEmail: '',
+                });
+              }
+            }}
           />
           <Gap height={12} />
           <LabelTextInput
             label="Password"
             placeholder="Your Secret Password"
             value={form.password}
-            onChangeText={(value) => setForm('password', value)}
             secureTextEntry={!visiblePassword}
+            validation={validation.errorPassword}
             suffix={
               <Button
                 type="btn-icon"
@@ -60,6 +87,20 @@ const Login = ({ navigation }) => {
                 }}
               />
             }
+            onChangeText={(value) => {
+              setForm('password', value);
+              if (value.length === 0) {
+                setValidation({
+                  ...validation,
+                  errorPassword: 'Password Must Be Required',
+                });
+              } else {
+                setValidation({
+                  ...validation,
+                  errorPassword: '',
+                });
+              }
+            }}
           />
           <Gap height={16} />
           <Link
@@ -76,10 +117,15 @@ const Login = ({ navigation }) => {
             height={48}
             type="btn-text"
             color={colors.purple}
-            onPress={() => {
-              storeData('isAuth', { value: true });
-              navigation.replace('Main');
-            }}
+            onPress={() => onSubmit()}
+            disable={
+              validation.errorEmail !== '' || validation.errorPassword !== ''
+            }
+            color={
+              validation.errorEmail !== '' || validation.errorPassword !== ''
+              ? colors.white
+              : colors.purple
+            }
           />
           <SocialAuthButton
             page="Login"

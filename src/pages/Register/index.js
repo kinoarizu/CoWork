@@ -189,7 +189,7 @@ const Register = ({ navigation }) => {
             title="Next Step"
             height={48}
             type="btn-text"
-            onPress={onSubmit}
+            onPress={() => onSubmit()}
             disable={
               validation.errorName !== '' ||
               validation.errorEmail !== '' ||

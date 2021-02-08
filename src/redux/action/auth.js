@@ -24,8 +24,11 @@ export const registerAction = (data, photo, navigation) => (dispatch) => {
       const profile = response.data.user;
       storeData('profile', profile);
 
-      const token = { tokens: response.data.tokens, status: false };
-      storeData('tokens', token);
+      const tokenInfo = { 
+        tokens: response.data.tokens, 
+        status: false,
+      };
+      storeData('tokenInfo', tokenInfo);
 
       const verificationData = {
         userId: profile.id,
@@ -42,7 +45,7 @@ export const registerAction = (data, photo, navigation) => (dispatch) => {
       ).catch(
         (error) => {
           dispatch(setLoading(false));
-          showError(error?.response?.data?.message || 'Send verification is failed');
+          showError(error?.response?.data?.message || 'Send Verification is Failed!');
         }
       );
     },
@@ -50,8 +53,33 @@ export const registerAction = (data, photo, navigation) => (dispatch) => {
     (error) => {
       console.log(error?.response?.data?.message);
       dispatch(setLoading(false));
-      showError(error?.response?.data?.message || 'Sign up is failed');
+      showError(error?.response?.data?.message || 'Register is Failed!');
     },
+  );
+};
+
+export const loginAction = (data, navigation) => (dispatch) => {
+  dispatch(setLoading(true));
+
+  Axios.post(`${API_URL}/auth/login`, data).then(
+    (response) => {
+      const profile = response.data.user;
+      storeData('profile', profile);
+
+      const tokenInfo = { 
+        tokens: response.data.tokens, 
+        status: true,
+      };
+      storeData('tokenInfo', tokenInfo);
+
+      dispatch(setLoading(false));
+      navigation.reset({ index: 0, routes: [{ name: 'Main' }] });
+    }
+  ).catch(
+    (error) => {
+      dispatch(setLoading(false));
+      showError(error?.response?.data?.message || 'Email or Password is Wrong!');
+    }
   );
 };
 
@@ -69,7 +97,7 @@ export const checkEmailAction = (data, navigation) => (dispatch) => {
   ).catch(
     (error) => {
       dispatch(setLoading(false));
-      showError(error?.response?.data?.message || 'Email has alredy taken');
+      showError(error?.response?.data?.message || 'Email Has Already Taken!');
     }
   );
 };
@@ -84,9 +112,13 @@ export const verificationAction = (data, navigation) => (dispatch) => {
         code: data,
       };
 
-      getData('tokens').then(
+      getData('tokenInfo').then(
         (response) => {
-          storeData('tokens', { tokens: response.tokens, status: true });
+          const tokenInfo = { 
+            tokens: response.tokens,
+            status: true, 
+          };
+          storeData('tokenInfo', tokenInfo);
         }
       );
 
@@ -100,7 +132,65 @@ export const verificationAction = (data, navigation) => (dispatch) => {
       ).catch(
         (error) => {
           dispatch(setLoading(false));
-          showError(error?.response?.data?.message || 'Verification code is wrong or expired');
+          showError(error?.response?.data?.message || 'Verification Code is Wrong or Expired!');
+        }
+      );
+    }
+  );
+};
+
+export const refreshTokenAction = () => (dispatch) => {
+  dispatch(setLoading(true));
+
+  getData('tokenInfo').then(
+    (response) => {
+      if (new Date(response.tokens.access.expires) > new Date()) {
+        const refreshToken = {
+          refreshToken: response.tokens.refresh.token,
+        }
+
+        Axios.post(`${API_URL}/auth/refresh-token`, refreshToken).then(
+          (response) => {
+            const tokenInfo = { 
+              tokens: response.data,
+              status: true, 
+            };
+            storeData('tokenInfo', tokenInfo);
+
+            dispatch(setLoading(false));
+          }
+        ).catch(
+          (error) => {
+            dispatch(setLoading(false));
+            showError(error?.response?.data?.message || 'Refresh Token Failed. Server Still Problem!');
+          }
+        );
+      } 
+      dispatch(setLoading(false));
+    }
+  );
+};
+
+export const logoutAction = (navigation) => (dispatch) => {
+  dispatch(setLoading(true));
+
+  getData('tokenInfo').then(
+    (response) => {
+      const refreshToken = {
+        refreshToken: response.tokens.refresh.token
+      };
+
+      Axios.post(`${API_URL}/auth/logout`, refreshToken).then(
+        (response) => {
+          if (response.status === 204) {
+            dispatch(setLoading(false));
+            navigation.reset({ index: 0, routes: [{ name: 'Login' }] });
+          }
+        }
+      ).catch(
+        (error) => {
+          dispatch(setLoading(false));
+          showError(error?.response?.data?.message || 'Logout Failed. Server Still Problem!');
         }
       );
     }

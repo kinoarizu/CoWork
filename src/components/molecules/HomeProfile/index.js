@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { IcLogout } from '../../../assets';
 import { colors, fonts } from '../../../utils';
-import { Gap } from '../../atoms';
+import { Button, Gap } from '../../atoms';
 
-const HomeProfile = ({ navigation }) => {
+const HomeProfile = ({ navigation, onLogout }) => {
   const [profile, setProfile] = useState({
     name: 'Anam Zabuza',
     email: 'anamzabuza@gmail.com',
@@ -16,22 +17,32 @@ const HomeProfile = ({ navigation }) => {
   });
 
   return (
-    <TouchableOpacity
-      style={styles.container}
-      activeOpacity={0.6}
-      onPress={() => navigation.navigate('EditProfile', profile)}
-    >
-      <Image source={{ uri: profile.photo }} style={styles.avatar} />
-      <View>
-        <Text style={styles.name}>{profile.name}</Text>
-        <Gap height={4} />
-        <Text style={styles.profession}>{profile.profession}</Text>
-      </View>
-    </TouchableOpacity>
+    <View style={styles.wrapper}>
+      <TouchableOpacity
+        style={styles.container}
+        activeOpacity={0.6}
+        onPress={() => navigation.navigate('EditProfile', profile)}
+      >
+        <Image source={{ uri: profile.photo }} style={styles.avatar} />
+        <View>
+          <Text style={styles.name}>{profile.name}</Text>
+          <Gap height={4} />
+          <Text style={styles.profession}>{profile.profession}</Text>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={onLogout}>
+        <IcLogout />
+      </TouchableOpacity>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
+  wrapper: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
   container: {
     flexDirection: 'row',
     alignItems: 'center',

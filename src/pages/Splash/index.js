@@ -11,7 +11,7 @@ const Splash = ({ navigation }) => {
     StatusBar.setBarStyle('light-content');
 
     setTimeout(() => {
-      getData('tokens').then((response) => {
+      getData('tokenInfo').then((response) => {
         if (response && response.status) {
           navigation.replace('Main');
         } else {

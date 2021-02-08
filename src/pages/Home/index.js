@@ -1,8 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IcCalendar, IcMap, IcRoom, workingSpaceData } from '../../assets';
 import { colors, fonts } from '../../utils';
+import { useDispatch } from 'react-redux';
+import { logoutAction, refreshTokenAction } from '../../redux/action';
 import {
   FlatList,
+  Modal,
   ScrollView,
   StatusBar,
   StyleSheet,
@@ -10,6 +13,7 @@ import {
   View,
 } from 'react-native';
 import {
+  Button,
   FilterSearchBox,
   Gap,
   HomeProfile,
@@ -19,15 +23,27 @@ import {
 } from '../../components';
 
 const Home = ({ navigation }) => {
+  const [logoutConfirm, setLogoutConfirm] = useState(false);
+
+  const dispatch = useDispatch();
+
   useEffect(() => {
     StatusBar.setHidden(false);
+    dispatch(refreshTokenAction());
   });
+
+  const onLogoutPressed = () => {
+    dispatch(logoutAction(navigation));
+  };
 
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.profileContainer}>
-          <HomeProfile navigation={navigation} />
+          <HomeProfile
+            navigation={navigation}
+            onLogout={() => onLogoutPressed()}
+          />
           <Gap height={20} />
           <Text style={styles.slogan}>
             More Productive{'\n'}with Comfortable Place
