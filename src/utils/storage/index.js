@@ -18,3 +18,11 @@ export const storeData = async (key, value) => {
     showError(`Failed Save ${key} in LocalStorage`);
   }
 };
+
+export const removeData = async (key) => {
+  try {
+    await AsyncStorage.removeItem(key);
+  } catch (error) {
+    showError(`Failed Remove ${key} in LocalStorage`);
+  }
+};

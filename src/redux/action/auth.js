@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import { API_URL, getData, showError, storeData } from '../../utils';
+import { API_URL, getData, removeData, showError, storeData } from '../../utils';
 import { setLoading } from './global';
 
 export const registerAction = (data, photo, navigation) => (dispatch) => {
@@ -183,6 +183,9 @@ export const logoutAction = (navigation) => (dispatch) => {
       Axios.post(`${API_URL}/auth/logout`, refreshToken).then(
         (response) => {
           if (response.status === 204) {
+            removeData('profile');
+            removeData('tokenInfo');
+
             dispatch(setLoading(false));
             navigation.reset({ index: 0, routes: [{ name: 'Login' }] });
           }
