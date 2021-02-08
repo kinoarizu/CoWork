@@ -7,14 +7,12 @@ import { IcAdd, IcRemove, ILUploadPhoto, ILUserNull } from '../../assets';
 import { useDispatch, useSelector } from 'react-redux';
 import { registerAction } from '../../redux/action';
 import {
-  ActivityIndicator,
   Image,
   ScrollView,
   StyleSheet,
   Text,
   View,
 } from 'react-native';
-import { setLoading } from '../../redux/action/global';
 
 const UploadPhoto = ({ navigation }) => {
   const [photo, setPhoto] = useState(ILUserNull);
@@ -50,12 +48,10 @@ const UploadPhoto = ({ navigation }) => {
   };
 
   const onUploadPressed = () => {
-    setLoading(true);
     dispatch(registerAction(authReducer, photoReducer, navigation));
   };
 
   const onSkipPressed = () => {
-    setLoading(true);
     dispatch(registerAction(authReducer, null, navigation));
   };
 

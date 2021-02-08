@@ -2,15 +2,23 @@ import React from 'react';
 import FitImage from 'react-native-fit-image';
 import SmoothPinCodeInput from 'react-native-smooth-pincode-input';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { colors, fonts, storeData } from '../../utils';
+import { colors, fonts } from '../../utils';
 import { Button, Gap } from '../../components';
 import { useForm } from '../../hooks';
 import { ILVerfication } from '../../assets';
+import { useDispatch } from 'react-redux';
+import { verificationAction } from '../../redux/action';
 
 const Verification = ({ navigation }) => {
   const [form, setForm] = useForm({
     code: '',
   });
+
+  const dispatch = useDispatch();
+
+  const onSubmit = () => {
+    dispatch(verificationAction(form.code, navigation));
+  };
 
   return (
     <View style={styles.screen}>
@@ -38,7 +46,6 @@ const Verification = ({ navigation }) => {
             textStyle={styles.cellTextStyle}
             textStyleFocused={styles.cellTextStyleFocused}
             onTextChange={(value) => setForm('code', value)}
-            onFulfill={() => {}}
           />
           <Gap height={169} />
           <Button
@@ -46,13 +53,7 @@ const Verification = ({ navigation }) => {
             height={48}
             type="btn-text"
             color={colors.purple}
-            onPress={() => {
-              storeData('isAuth', { value: true });
-              navigation.reset({
-                index: 0,
-                routes: [{ name: 'Main' }],
-              });
-            }}
+            onPress={() => onSubmit()}
           />
         </View>
       </ScrollView>

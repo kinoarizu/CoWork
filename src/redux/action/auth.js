@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import { API_URL, showError, storeData } from '../../utils';
+import { API_URL, getData, showError, storeData } from '../../utils';
 import { setLoading } from './global';
 
 export const registerAction = (data, photo, navigation) => (dispatch) => {
@@ -8,7 +8,7 @@ export const registerAction = (data, photo, navigation) => (dispatch) => {
   registerData.append('name', data.name);
   registerData.append('email', data.email);
   registerData.append('password', data.password);
-  
+
   if (photo) {
     registerData.append('photo', photo);
   }
@@ -32,15 +32,19 @@ export const registerAction = (data, photo, navigation) => (dispatch) => {
         email: profile.email,
       };
 
-      Axios.post(`${API_URL}/auth/send-verification`, verificationData).catch(
+      Axios.post(`${API_URL}/auth/send-verification`, verificationData).then(
+        (response) => {
+          if (response.status === 204) {      
+            dispatch(setLoading(false));
+            navigation.reset({ index: 0, routes: [{ name: 'Verification' }] });
+          }
+        }
+      ).catch(
         (error) => {
           dispatch(setLoading(false));
           showError(error?.response?.data?.message || 'Send verification is failed');
         }
       );
-
-      dispatch(setLoading(false));
-      navigation.reset({ index: 0, routes: [{ name: 'Verification' }] });
     },
   ).catch(
     (error) => {
@@ -56,7 +60,7 @@ export const checkEmailAction = (data, navigation) => (dispatch) => {
 
   Axios.post(`${API_URL}/auth/check-email`, { email: data.email }).then(
     (response) => {
-      if (response.status === 204) {
+      if (response.status === 204) {  
         dispatch(setLoading(false));
         dispatch({ type: 'SET_AUTH', payload: data });
         navigation.navigate('UploadPhoto');
@@ -66,6 +70,39 @@ export const checkEmailAction = (data, navigation) => (dispatch) => {
     (error) => {
       dispatch(setLoading(false));
       showError(error?.response?.data?.message || 'Email has alredy taken');
+    }
+  );
+};
+
+export const verificationAction = (data, navigation) => (dispatch) => {
+  dispatch(setLoading(true));
+
+  getData('profile').then(
+    (response) => {
+      const verificationData = {
+        userId: response.id,
+        code: data,
+      };
+
+      getData('tokens').then(
+        (response) => {
+          storeData('tokens', { tokens: response.tokens, status: true });
+        }
+      );
+
+      Axios.post(`${API_URL}/auth/check-verification`, verificationData).then(
+        (response) => {
+          if (response.status === 204) {
+            dispatch(setLoading(false));
+            navigation.reset({ index: 0, routes: [{ name: 'Main' }] });
+          }
+        }
+      ).catch(
+        (error) => {
+          dispatch(setLoading(false));
+          showError(error?.response?.data?.message || 'Verification code is wrong or expired');
+        }
+      );
     }
   );
 };

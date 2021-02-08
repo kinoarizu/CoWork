@@ -11,8 +11,8 @@ const Splash = ({ navigation }) => {
     StatusBar.setBarStyle('light-content');
 
     setTimeout(() => {
-      getData('isAuth').then((response) => {
-        if (response) {
+      getData('tokens').then((response) => {
+        if (response && response.status) {
           navigation.replace('Main');
         } else {
           getData('onBoardFinish').then((response) => {
