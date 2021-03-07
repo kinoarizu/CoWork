@@ -12,22 +12,40 @@ const Success = ({ route, navigation }) => {
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.container}>
-          <Text style={styles.saveTicketText}>Save The Ticket</Text>
+          <Text style={styles.saveTicketText}>
+            Save The Ticket
+          </Text>
           <Text style={styles.messageText}>
             This the ticket for booking your {type},{'\n'}
             save or capture to order the {type}.
           </Text>
           <Gap height={20} />
-          <QRCode value="reactnative.dev" size={176} />
+          <QRCode 
+            value="reactnative.dev" 
+            size={176} 
+          />
           <Gap height={24} />
-          <Text style={styles.title}>{booked.pickRoom.name}</Text>
-          <Text style={styles.subtitle}>{booked.pickRoom.room.name}</Text>
+          <Text style={styles.title}>
+            {booked.pickRoom.name}
+          </Text>
+          <Text style={styles.subtitle}>
+            {booked.pickRoom.room.name}
+          </Text>
           <View style={styles.ticketInfo}>
-            <InfoItem icon={<IcDate />} info={booked.date} />
+            <InfoItem 
+              icon={<IcDate />} 
+              info={booked.date} 
+            />
             <Gap width={10} />
-            <InfoItem icon={<IcTime />} info={booked.time} />
+            <InfoItem 
+              icon={<IcTime />} 
+              info={booked.time} 
+            />
             <Gap width={10} />
-            <InfoItem icon={<IcPerson />} info={`${booked.person} Person`} />
+            <InfoItem 
+              icon={<IcPerson />} 
+              info={`${booked.person} Person`} 
+            />
           </View>
         </View>
         <View style={styles.buttonContainer}>

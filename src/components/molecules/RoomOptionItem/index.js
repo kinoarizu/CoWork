@@ -10,13 +10,24 @@ const RoomOptionItem = ({ spaceName, address, roomOptions, onPress }) => {
       style={styles.container}
       onPress={onPress}
     >
-      <Image source={{ uri: roomOptions.image }} style={styles.itemImage} />
+      <Image 
+        source={{ uri: roomOptions.image }} 
+        style={styles.itemImage} 
+      />
       <View style={styles.itemInfo}>
         <Badge type={roomOptions.status} />
-        <Text style={styles.itemSpaceName}>{spaceName}</Text>
-        <Text style={styles.itemName}>{roomOptions.name}</Text>
-        <Text style={styles.itemAddress}>{address}</Text>
-        <Text style={styles.itemPrice}>{roomOptions.price} $/hours</Text>
+        <Text style={styles.itemSpaceName}>
+          {spaceName}
+        </Text>
+        <Text style={styles.itemName}>
+          {roomOptions.name}
+        </Text>
+        <Text style={styles.itemAddress}>
+          {address}
+        </Text>
+        <Text style={styles.itemPrice}>
+          {roomOptions.price} $/hours
+        </Text>
       </View>
     </TouchableOpacity>
   );

@@ -9,7 +9,10 @@ const RoomOption = ({ route, navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <HeaderBar title="Room Option" navigation={() => navigation.pop()} />
+        <HeaderBar 
+          title="Room Option" 
+          navigation={() => navigation.pop()} 
+          />
         <View style={styles.contentContainer}>
           <FlatList
             data={workSpace.roomOptions}

@@ -18,7 +18,10 @@ const ResetPassword = ({ navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <FitImage source={ILChangePassowrd} style={styles.cover} />
+        <FitImage 
+          source={ILChangePassowrd} 
+          style={styles.cover} 
+        />
         <View style={styles.resetPasswordContainer}>
           <Text style={styles.title}>
             Forgot Pass,{'\n'}Let's Tell Your Email

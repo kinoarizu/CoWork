@@ -40,9 +40,14 @@ const Login = ({ navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <FitImage source={ILLogin} style={styles.cover} />
+        <FitImage 
+          source={ILLogin} 
+          style={styles.cover} 
+        />
         <View style={styles.loginContainer}>
-          <Text style={styles.title}>Welcome,{'\n'}Please Login First</Text>
+          <Text style={styles.title}>
+            Welcome,{'\n'}Please Login First
+          </Text>
           <Gap height={24} />
           <LabelTextInput
             label="Email"

@@ -9,7 +9,10 @@ const OnBoardingThree = ({ navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <FitImage source={ILBoard3} style={styles.cover} />
+        <FitImage 
+          source={ILBoard3} 
+          style={styles.cover} 
+        />
         <OnBoardingSection
           headTitle="Create An"
           footTitle="Event"

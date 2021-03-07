@@ -84,7 +84,10 @@ const EditProfile = ({ route, navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <HeaderBar title="Edit Profile" navigation={() => navigation.pop()} />
+        <HeaderBar 
+          title="Edit Profile" 
+          navigation={() => navigation.pop()} 
+        />
         <View style={styles.formWrapper}>
           <LabelTextInput
             label="Your Name"
@@ -107,7 +110,9 @@ const EditProfile = ({ route, navigation }) => {
           <Gap height={15} />
           <View>
             <View style={styles.labelValidationWrapper}>
-              <Text style={styles.birthLabel}>Date Of Birth</Text>
+              <Text style={styles.birthLabel}>
+                Date Of Birth
+              </Text>
               <Text style={styles.birthValidation}></Text>
             </View>
             <Gap height={11} />

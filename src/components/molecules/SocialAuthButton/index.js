@@ -12,7 +12,9 @@ const SocialAuthButton = ({
 }) => {
   return (
     <View>
-      <Text style={styles.textLoginWith}>{page} With</Text>
+      <Text style={styles.textLoginWith}>
+        {page} With
+      </Text>
       <View style={styles.socialContainer}>
         <Button
           type="btn-icon"

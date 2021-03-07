@@ -13,7 +13,10 @@ const OnBoardingOne = ({ navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <FitImage source={ILBoard1} style={styles.cover} />
+        <FitImage 
+          source={ILBoard1} 
+          style={styles.cover} 
+        />
         <OnBoardingSection
           headTitle="Welcome To"
           footTitle="Cowork"

@@ -23,13 +23,19 @@ const Verification = ({ navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <FitImage source={ILVerfication} style={styles.cover} />
+        <FitImage 
+          source={ILVerfication} 
+          style={styles.cover} 
+        />
         <View style={styles.verificationContainer}>
-          <Text style={styles.title}>Last Step,{'\n'}Enter Your Code</Text>
+          <Text style={styles.title}>
+            Last Step,{'\n'}Enter Your Code
+          </Text>
           <Gap height={24} />
           <Text style={styles.verificationInfo}>
-            We have sent verification code to your email, let's check your
-            inbox, it will be expired in 1 hour.
+            We have sent verification code to your 
+            email, let's check your inbox, it will 
+            be expired in 1 hour.
           </Text>
           <Gap height={36} />
           <SmoothPinCodeInput

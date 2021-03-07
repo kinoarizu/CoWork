@@ -23,11 +23,18 @@ const HomeProfile = ({ navigation, onLogout }) => {
         activeOpacity={0.6}
         onPress={() => navigation.navigate('EditProfile', profile)}
       >
-        <Image source={{ uri: profile.photo }} style={styles.avatar} />
+        <Image 
+          source={{ uri: profile.photo }} 
+          style={styles.avatar} 
+        />
         <View>
-          <Text style={styles.name}>{profile.name}</Text>
+          <Text style={styles.name}>
+            {profile.name}
+          </Text>
           <Gap height={4} />
-          <Text style={styles.profession}>{profile.profession}</Text>
+          <Text style={styles.profession}>
+            {profile.profession}
+          </Text>
         </View>
       </TouchableOpacity>
       <TouchableOpacity onPress={onLogout}>

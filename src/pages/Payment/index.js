@@ -18,14 +18,19 @@ const Payment = ({ route, navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <HeaderBar title="Payment" navigation={() => navigation.pop()} />
+        <HeaderBar 
+          title="Payment" 
+          navigation={() => navigation.pop()} 
+        />
         <View style={styles.contentContainer}>
           <RoomOptionItem
             spaceName={room.name}
             address={room.address}
             roomOptions={room.room}
           />
-          <Text style={styles.titlePayment}>Choose Payment</Text>
+          <Text style={styles.titlePayment}>
+            Choose Payment
+          </Text>
           <View style={styles.paymentWrapper}>
             <PaymentOptionItem
               title="Virtual Account"

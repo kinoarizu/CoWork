@@ -9,7 +9,9 @@ const PaymentOptionItem = ({ title, image, isSelected, onPress }) => {
       style={styles.container(isSelected)}
       onPress={onPress}
     >
-      <Text style={styles.title(isSelected)}>{title}</Text>
+      <Text style={styles.title(isSelected)}>
+        {title}
+      </Text>
       <Image source={image} />
     </TouchableOpacity>
   );

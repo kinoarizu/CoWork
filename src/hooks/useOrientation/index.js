@@ -14,7 +14,7 @@ export const useOrientation = () => {
       }
     };
 
-    updateState(); // for initial render
+    updateState();
     Dimensions.addEventListener('change', updateState);
     return () => Dimensions.removeEventListener('change', updateState);
   }, []);

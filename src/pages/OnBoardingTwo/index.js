@@ -9,7 +9,10 @@ const OnBoardingTwo = ({ navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <FitImage source={ILBoard2} style={styles.cover} />
+        <FitImage 
+          source={ILBoard2} 
+          style={styles.cover} 
+        />
         <OnBoardingSection
           headTitle="Find a Working"
           footTitle="Space"

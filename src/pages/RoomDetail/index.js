@@ -79,16 +79,27 @@ const RoomDetail = ({ route, navigation }) => {
       </View>
       <View style={styles.workSpaceContent}>
         <View style={styles.priceContainer}>
-          <Text style={styles.priceText}>{room.price * 30} $/Month</Text>
+          <Text style={styles.priceText}>
+            {room.price * 30} $/Month
+          </Text>
         </View>
-        <Text style={styles.workpaceName}>{workSpace.name}</Text>
-        <Text style={styles.roomName}>({room.name} Room)</Text>
-        <Text style={styles.addressText}>{workSpace.address}</Text>
+        <Text style={styles.workpaceName}>
+          {workSpace.name}
+        </Text>
+        <Text style={styles.roomName}>
+          ({room.name} Room)
+        </Text>
+        <Text style={styles.addressText}>
+          {workSpace.address}
+        </Text>
       </View>
       <Divider color={colors.grey5} type="solid" />
       <View style={styles.ratingContent}>
         <View>
-          <RatingStar number={workSpace.rating} size={14} />
+          <RatingStar 
+            number={workSpace.rating} 
+            size={14} 
+          />
           <Text style={styles.commentText}>
             {workSpace.totalComment} Comments
           </Text>
@@ -142,14 +153,25 @@ const RoomDetail = ({ route, navigation }) => {
             style={styles.fullPhoto}
             onPress={() => {}}
           >
-            <Image source={{ uri: pictures[0] }} style={styles.roomFullPhoto} />
+            <Image 
+              source={{ uri: pictures[0] }} 
+              style={styles.roomFullPhoto} 
+            />
             <View style={styles.fullCamera}>
               <IcPhotoCamera />
-              <Text style={styles.cameraText}>360° Camera</Text>
+              <Text style={styles.cameraText}>
+                360° Camera
+              </Text>
             </View>
           </TouchableOpacity>
-          <Image source={{ uri: pictures[1] }} style={styles.roomPhoto} />
-          <Image source={{ uri: pictures[2] }} style={styles.roomPhoto} />
+          <Image 
+            source={{ uri: pictures[1] }} 
+            style={styles.roomPhoto} 
+          />
+          <Image 
+            source={{ uri: pictures[2] }} 
+            style={styles.roomPhoto} 
+          />
         </View>
       </View>
       <View style={styles.buttonContainer}>

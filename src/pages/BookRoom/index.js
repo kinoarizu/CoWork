@@ -39,9 +39,15 @@ const BookRoom = ({ route, navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <HeaderBar title="Book Room" navigation={() => navigation.pop()} />
+        <HeaderBar 
+          title="Book Room" 
+          navigation={() => navigation.pop()} 
+        />
         <View style={styles.formWrapper}>
-          <RoomPicker room={form.pickRoom} onPress={onPickRoomPressed} />
+          <RoomPicker 
+            room={form.pickRoom} 
+            onPress={onPickRoomPressed} 
+          />
           <Gap height={15} />
           <DatePicker
             date={form.date}

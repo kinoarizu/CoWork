@@ -8,8 +8,12 @@ const ImageUpload = ({ label, validation, width, height, photo, onPress }) => {
   return (
     <View>
       <View style={styles.labelWrapper}>
-        <Text style={styles.label}>{label}</Text>
-        <Text style={styles.errorValidation}>{validation}</Text>
+        <Text style={styles.label}>
+          {label}
+        </Text>
+        <Text style={styles.errorValidation}>
+          {validation}
+        </Text>
       </View>
       <Gap height={11} />
       <TouchableOpacity
@@ -21,10 +25,15 @@ const ImageUpload = ({ label, validation, width, height, photo, onPress }) => {
           <>
             <IcCamera />
             <Gap height={9} />
-            <Text style={styles.title}>Add Photo</Text>
+            <Text style={styles.title}>
+              Add Photo
+            </Text>
           </>
         ) : (
-          <Image source={photo} style={styles.pickedImage(width, height)} />
+          <Image 
+            source={photo} 
+            style={styles.pickedImage(width, height)} 
+          />
         )}
       </TouchableOpacity>
     </View>

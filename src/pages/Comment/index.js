@@ -9,7 +9,10 @@ const Comment = ({ route, navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <HeaderBar title="Comment" navigation={() => navigation.pop()} />
+        <HeaderBar 
+          title="Comment" 
+          navigation={() => navigation.pop()} 
+        />
         <View style={styles.commentWrapper}>
           <FlatList
             data={comments}

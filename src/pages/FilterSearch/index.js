@@ -36,7 +36,10 @@ const FilterSearch = ({ navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <HeaderBar title="Filter Search" navigation={() => navigation.pop()} />
+        <HeaderBar 
+          title="Filter Search" 
+          navigation={() => navigation.pop()} 
+        />
         <View style={styles.typeRoomWrapper}>
           <FlatList
             horizontal

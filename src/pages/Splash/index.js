@@ -34,8 +34,12 @@ const Splash = ({ navigation }) => {
     <View style={styles.container}>
       <ILLogo />
       <Gap height={11} />
-      <Text style={styles.title}>COWORK</Text>
-      <Text style={styles.subtitle}>Why do you want to motivate yourself?</Text>
+      <Text style={styles.title}>
+        COWORK
+      </Text>
+      <Text style={styles.subtitle}>
+        Why do you want to motivate yourself?
+      </Text>
     </View>
   );
 };

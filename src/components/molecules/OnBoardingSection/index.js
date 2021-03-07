@@ -12,11 +12,17 @@ const OnBoardingSection = ({
 }) => {
   return (
     <View style={styles.onBoardContainer}>
-      <Text style={styles.onBoardHeadTitle}>{headTitle}</Text>
-      <Text style={styles.onBoardFootTitle}>{footTitle}</Text>
+      <Text style={styles.onBoardHeadTitle}>
+        {headTitle}
+      </Text>
+      <Text style={styles.onBoardFootTitle}>
+        {footTitle}
+      </Text>
       <Gap height={12} />
       <View style={styles.onBoardAction}>
-        <Text style={styles.onBoardSubtitle}>{description}</Text>
+        <Text style={styles.onBoardSubtitle}>
+          {description}
+        </Text>
         <Button
           type="btn-icon"
           width={40}

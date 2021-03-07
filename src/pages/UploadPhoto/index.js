@@ -58,14 +58,20 @@ const UploadPhoto = ({ navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <FitImage source={ILUploadPhoto} style={styles.cover} />
+        <FitImage 
+          source={ILUploadPhoto} 
+          style={styles.cover} 
+        />
         <View style={styles.uploadPhotoContainer}>
           <Text style={styles.title}>
             Almost Finish,{'\n'}Please Add Your Pic
           </Text>
           <Gap height={72} />
           <View style={styles.avatarContainer}>
-            <Image source={photo} style={styles.avatar} />
+            <Image 
+              source={photo} 
+              style={styles.avatar} 
+            />
             <View style={styles.addPhoto}>
               {!(photo == ILUserNull) && (
                 <Button
@@ -73,8 +79,11 @@ const UploadPhoto = ({ navigation }) => {
                   width={28}
                   height={28}
                   color={colors.red2}
-                  icon={<IcRemove width={13} height={13} />}
                   onPress={removePhoto}
+                  icon={<IcRemove 
+                    width={13} 
+                    height={13} 
+                  />}
                 />
               )}
               {photo == ILUserNull && (
@@ -84,7 +93,10 @@ const UploadPhoto = ({ navigation }) => {
                   height={28}
                   color={colors.green1}
                   onPress={addPhoto}
-                  icon={<IcAdd width={13} height={13} />}
+                  icon={<IcAdd 
+                    width={13} 
+                    height={13} 
+                  />}
                 />
               )}
             </View>

@@ -42,9 +42,14 @@ const Register = ({ navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <FitImage source={ILRegister} style={styles.cover} />
+        <FitImage 
+          source={ILRegister} 
+          style={styles.cover} 
+        />
         <View style={styles.registerContainer}>
-          <Text style={styles.title}>Welcome,{'\n'}Register To Access</Text>
+          <Text style={styles.title}>
+            Welcome,{'\n'}Register To Access
+          </Text>
           <Gap height={24} />
           <LabelTextInput
             label="Name"

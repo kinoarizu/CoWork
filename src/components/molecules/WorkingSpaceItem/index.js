@@ -21,22 +21,36 @@ const WorkingSpaceItem = ({
       style={styles.container}
       onPress={onPress}
     >
-      <Image source={{ uri: image }} style={styles.itemImage} />
+      <Image 
+        source={{ uri: image }} 
+        style={styles.itemImage} 
+      />
       <View style={styles.itemInfo}>
         <View style={styles.itemValue}>
           <View>
-            <RatingStar number={rating} size={11} />
+            <RatingStar 
+              number={rating} 
+              size={11} 
+            />
             <Gap height={2} />
-            <Text style={styles.totalComment}>{totalComment} Comments</Text>
+            <Text style={styles.totalComment}>
+              {totalComment} Comments
+            </Text>
           </View>
           <TouchableOpacity onPress={() => setFavorite(!favorite)}>
             {favorite ? <IcLoveOn /> : <IcLoveOff />}
           </TouchableOpacity>
         </View>
         <Gap height={8} />
-        <Text style={styles.itemName}>{name}</Text>
-        <Text style={styles.itemAddress}>{address}</Text>
-        <Text style={styles.itemPriceRange}>$ {priceRange}</Text>
+        <Text style={styles.itemName}>
+          {name}
+        </Text>
+        <Text style={styles.itemAddress}>
+          {address}
+        </Text>
+        <Text style={styles.itemPriceRange}>
+          $ {priceRange}
+        </Text>
       </View>
     </TouchableOpacity>
   );

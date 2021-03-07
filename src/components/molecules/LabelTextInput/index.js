@@ -42,8 +42,12 @@ const LabelTextInput = ({
   return (
     <View style={{ flex: 1 }}>
       <View style={styles.labelContainer}>
-        <Text style={styles.label}>{label}</Text>
-        <Text style={styles.errorValidation}>{validation}</Text>
+        <Text style={styles.label}>
+          {label}
+        </Text>
+        <Text style={styles.errorValidation}>
+          {validation}
+        </Text>
       </View>
       <Gap height={11} />
       <View style={styles.inputContainer(backgroundColor, multiline)}>

@@ -25,16 +25,29 @@ const CommentItem = ({
     <View style={styles.container}>
       <View style={styles.profileReport}>
         <View style={styles.userProfile}>
-          <Image source={{ uri: userPhoto }} style={styles.userPic} />
+          <Image 
+            source={{ uri: userPhoto }} 
+            style={styles.userPic} 
+          />
           <Gap width={16} />
           <View>
-            <Text style={styles.userName}>{userName}</Text>
+            <Text style={styles.userName}>
+              {userName}
+            </Text>
             <Gap height={5} />
-            <RatingStar number={rating} size={10} />
-            <Text style={styles.datetime}>{datetime}</Text>
+            <RatingStar 
+              number={rating} 
+              size={10} 
+            />
+            <Text style={styles.datetime}>
+              {datetime}
+            </Text>
           </View>
         </View>
-        <TouchableOpacity activeOpacity={0.5} onPress={onReportPressed}>
+        <TouchableOpacity 
+          activeOpacity={0.5} 
+          onPress={onReportPressed}
+        >
           <IcReport />
         </TouchableOpacity>
       </View>

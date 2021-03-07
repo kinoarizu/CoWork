@@ -16,8 +16,12 @@ const MultipleUploadImage = ({ images, validation, onPickPress }) => {
   return (
     <View style={{ flex: 1 }}>
       <View style={styles.labelContainer}>
-        <Text style={styles.label}>Upload Poster</Text>
-        <Text style={styles.validation}>{validation}</Text>
+        <Text style={styles.label}>
+          Upload Poster
+        </Text>
+        <Text style={styles.validation}>
+          {validation}
+        </Text>
       </View>
       <Gap height={11} />
       {images.length === 0 ? (
@@ -28,10 +32,15 @@ const MultipleUploadImage = ({ images, validation, onPickPress }) => {
         >
           <IcCamera width={25} height={22} />
           <Gap height={5} />
-          <Text style={styles.textCamera}>Add Photos</Text>
+          <Text style={styles.textCamera}>
+            Add Photos
+          </Text>
         </TouchableOpacity>
       ) : (
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+        <ScrollView 
+          horizontal 
+          showsHorizontalScrollIndicator={false}
+        >
           <FlatList
             horizontal
             scrollEnabled={false}
@@ -50,7 +59,9 @@ const MultipleUploadImage = ({ images, validation, onPickPress }) => {
                     >
                       <IcCamera width={25} height={22} />
                       <Gap height={5} />
-                      <Text style={styles.textCamera}>Add Photos</Text>
+                      <Text style={styles.textCamera}>
+                        Add Photos
+                      </Text>
                     </TouchableOpacity>
                   ) : null}
                 </>

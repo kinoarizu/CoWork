@@ -25,7 +25,9 @@ const RoomPicker = ({ room, onPress }) => {
         >
           <IcPlace />
           <Gap height={10} />
-          <Text style={styles.title}>Find A Place</Text>
+          <Text style={styles.title}>
+            Find A Place
+          </Text>
         </TouchableOpacity>
       );
     }
@@ -34,8 +36,12 @@ const RoomPicker = ({ room, onPress }) => {
   return (
     <View style={{ flex: 1 }}>
       <View style={styles.labelValidationWrapper}>
-        <Text style={styles.roomLabel}>Pick Room</Text>
-        <Text style={styles.roomValidation}></Text>
+        <Text style={styles.roomLabel}>
+          Pick Room
+        </Text>
+        <Text style={styles.roomValidation}>
+          
+        </Text>
       </View>
       <Gap height={11} />
       {renderComponent()}

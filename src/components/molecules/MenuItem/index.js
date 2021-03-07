@@ -12,7 +12,9 @@ const MenuItem = ({ title, icon, onPress }) => {
     >
       {icon}
       <Gap height={10} />
-      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.title}>
+        {title}
+      </Text>
     </TouchableOpacity>
   );
 };

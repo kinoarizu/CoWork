@@ -9,24 +9,45 @@ const RoomPhotos = ({ route, navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <HeaderBar title="Photos" navigation={() => navigation.pop()} />
+        <HeaderBar 
+          title="Photos" 
+          navigation={() => navigation.pop()} 
+        />
         <View style={styles.contentContainer}>
           <View style={styles.photoColumn(160)}>
-            <Image source={{ uri: pictures[0] }} style={styles.photo(160)} />
+            <Image 
+              source={{ uri: pictures[0] }} 
+              style={styles.photo(160)} 
+            />
           </View>
           <View style={styles.photoColumn(340)}>
-            <Image source={{ uri: pictures[1] }} style={styles.photo(340)} />
+            <Image 
+              source={{ uri: pictures[1] }} 
+              style={styles.photo(340)} 
+            />
             <Gap width={16} />
             <View>
-              <Image source={{ uri: pictures[2] }} style={styles.photo(160)} />
+              <Image 
+                source={{ uri: pictures[2] }} 
+                style={styles.photo(160)} 
+              />
               <Gap height={20} />
-              <Image source={{ uri: pictures[3] }} style={styles.photo(160)} />
+              <Image 
+                source={{ uri: pictures[3] }} 
+                style={styles.photo(160)} 
+              />
             </View>
           </View>
           <View style={styles.photoColumn(160)}>
-            <Image source={{ uri: pictures[4] }} style={styles.photo(160)} />
+            <Image 
+              source={{ uri: pictures[4] }} 
+              style={styles.photo(160)} 
+            />
             <Gap width={16} />
-            <Image source={{ uri: pictures[5] }} style={styles.photo(160)} />
+            <Image 
+              source={{ uri: pictures[5] }} 
+              style={styles.photo(160)} 
+            />
           </View>
           <Gap height={80} />
         </View>

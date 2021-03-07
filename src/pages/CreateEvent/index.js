@@ -41,7 +41,10 @@ const CreateEvent = ({ navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <HeaderBar title="Create Event" navigation={() => navigation.pop()} />
+        <HeaderBar 
+          title="Create Event" 
+          navigation={() => navigation.pop()} 
+        />
         <View style={styles.formWrapper}>
           <LabelTextInput
             label="Event Title"

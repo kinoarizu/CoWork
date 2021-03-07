@@ -14,14 +14,18 @@ const ForgotPassword = ({ navigation }) => {
   return (
     <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <FitImage source={ILForgotPassword} style={styles.cover} />
+        <FitImage 
+          source={ILForgotPassword} 
+          style={styles.cover} 
+        />
         <View style={styles.forgotPasswordContainer}>
           <Text style={styles.title}>
             Forgot Pass,{'\n'}Let's Tell Your Email
           </Text>
           <Gap height={24} />
           <Text style={styles.resetPasswordInfo}>
-            Enter the email associated with your account and we'll send an email
+            Enter the email associated with 
+            your account and we'll send an email
             with instructions to reset your password.
           </Text>
           <Gap height={24} />
